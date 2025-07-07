@@ -8,7 +8,7 @@ interface NavigationItemsProps {
   url?: string;
   onclick?: () => void;
 }
-export default function NavigationItems({
+export default function NavigationItem({
   className,
   children,
   url,
