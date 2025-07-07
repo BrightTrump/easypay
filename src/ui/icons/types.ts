@@ -143,7 +143,6 @@ export enum Icons {
   SettingsTwo = "settings-two",
   Shrink = "shrink",
   SidebarCollapse = "SidebarCollapse",
-  Slack = "slack",
   Status = "status",
   Support = "support",
   SwitchOff = "switch-off",
@@ -161,7 +160,6 @@ export enum Icons {
   User = "user",
   UserGroup = "user-group",
   Whatsapp = "whatsapp",
-  WhatsappGreen = "whatsapp-green",
   WordFile = "word-file",
   Workspace = "workspaorce",
 }

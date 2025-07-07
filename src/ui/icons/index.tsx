@@ -48,7 +48,6 @@ import EditSquare from "./edit-square";
 import Search from "./search";
 import Filter from "./filter";
 import Whatsapp from "./whatsapp";
-import WhatsappGreen from "./whatsapp-green";
 import ProfileCircle from "./profile-circle";
 import TimeCircle from "./time-circle";
 import PdfFile from "./pdf-file";
@@ -110,7 +109,6 @@ import AI from "./ai";
 import Option from "./option";
 import Copy from "./copy";
 import Microsoft from "./microsoft";
-import Slack from "./slack";
 import SettingsTwo from "./settings-two";
 import ProjectSymlink from "./project-symlink";
 import Status from "./status";
@@ -587,9 +585,6 @@ export function Icon({ type, color, size }: Props) {
     case Icons.SidebarCollapse:
       return <SidebarCollapse {...props} />;
 
-    case Icons.Slack:
-      return <Slack {...props} />;
-
     case Icons.Status:
       return <Status {...props} />;
 
@@ -637,9 +632,6 @@ export function Icon({ type, color, size }: Props) {
 
     case Icons.Whatsapp:
       return <Whatsapp {...props} />;
-
-    case Icons.WhatsappGreen:
-      return <WhatsappGreen {...props} />;
 
     case Icons.WordFile:
       return <WordFile {...props} />;

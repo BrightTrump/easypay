@@ -20,9 +20,9 @@ export default function HeroSection() {
               Welcome to <span className="text-[#285ab1]">Homelands</span>
             </h1>
             <span>
-              We simplify banking so you can focus on what's most important to
-              you: growing your business. Enjoy complete visibility of the money
-              going into and out of your
+              We simplify banking so you can focus on what&apos;s most important
+              to you: growing your business. Enjoy complete visibility of the
+              money going into and out of your
             </span>
           </div>
 

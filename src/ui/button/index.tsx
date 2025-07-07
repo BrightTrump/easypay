@@ -6,8 +6,6 @@ import DangerOutlined from "./danger-outlined";
 import Default from "./default";
 import DangerFilled from "./danger-filled";
 import Neutral from "./neutral";
-import BlackFilledRounded from "./black-filled";
-import BlackOutlinedRounded from "./black-outlined";
 import BlackFilled from "./black-filled";
 import BlackOutlined from "./black-outlined";
 

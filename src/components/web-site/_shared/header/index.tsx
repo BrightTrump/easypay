@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
-import LogoImage from "../logo/Logo";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Navigation from "./navigation/navigation";
 import { Button } from "@/ui/button";
 import { ButtonVariants } from "@/ui/button/types";
 export default function Header() {
-  const pathName = usePathname();
+  // const pathName = usePathname();
 
   return (
     <header className="py-5 layout-spacing z-20 sticky bg-white top-0 left-0 w-full">

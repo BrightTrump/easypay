@@ -4,8 +4,8 @@ import { IconProps } from "../types";
 export default function RoundCalender({ color, size }: IconProps) {
   return (
     <svg
-      width="14"
-      height="15"
+      width={size}
+      height={size}
       viewBox="0 0 14 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ export default function RoundCalender({ color, size }: IconProps) {
         width="10.5"
         height="10.5"
         rx="2.91667"
-        stroke="#555555"
+        stroke={color}
         strokeWidth="0.875"
       />
       <path

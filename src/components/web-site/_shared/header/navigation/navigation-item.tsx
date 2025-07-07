@@ -18,10 +18,13 @@ export default function NavigationItem({
   const router = useRouter();
 
   const handleOnClick = () => {
-    url && router.push(url);
-    url && loader.start();
+    if (url) {
+      loader.start();
+      router.push(url);
+    }
     onclick?.();
   };
+
   return (
     <button
       onClick={handleOnClick}
