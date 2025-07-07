@@ -11,11 +11,11 @@ import BlackOutlinedRounded from "./black-outlined";
 
 export function Button(props: ButtonProps) {
   switch (props.variant) {
-    case ButtonVariants.BlackFilledRounded:
-      return <BlackFilledRounded {...props} />;
+    case ButtonVariants.BlackFilled:
+      return <BlackFilled {...props} />;
 
-    case ButtonVariants.BlackOutlinedRounded:
-      return <BlackOutlinedRounded {...props} />;
+    case ButtonVariants.BlackOutlined:
+      return <BlackOutlined {...props} />;
 
     case ButtonVariants.DangerFilled:
       return <DangerFilled {...props} />;
@@ -28,17 +28,9 @@ export function Button(props: ButtonProps) {
 
     case ButtonVariants.PrimaryFilled:
       return <PrimaryFilled {...props} />;
-    case ButtonVariants.PrimaryFilledRounded:
-      return <PrimaryFilledRounded {...props} />;
 
     case ButtonVariants.PrimaryOutlined:
       return <PrimaryOutlined {...props} />;
-
-    case ButtonVariants.PrimaryOutlinedRounded:
-      return <PrimaryOutlinedRounded {...props} />;
-
-    case ButtonVariants.WhiteFilledRounded:
-      return <WhiteFilledRounded {...props} />;
 
     default:
       return <Default {...props} />;

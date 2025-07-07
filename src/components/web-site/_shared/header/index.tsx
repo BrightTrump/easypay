@@ -27,7 +27,7 @@ export default function Header() {
             <Link href={"/login"} className="grid">
               <Button
                 className="whitespace-nowrap border border-[#141414] rounded-xl"
-                variant={ButtonVariants.BlackOutlinedRounded}
+                variant={ButtonVariants.BlackOutlined}
               >
                 Sign in
               </Button>
@@ -35,7 +35,7 @@ export default function Header() {
             <Link href={"/login"} className="grid">
               <Button
                 className="whitespace-nowrap border border-[#141414] rounded-xl"
-                variant={ButtonVariants.BlackFilledRounded}
+                variant={ButtonVariants.BlackFilled}
               >
                 Sign Out
               </Button>
