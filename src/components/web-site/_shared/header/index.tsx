@@ -35,9 +35,58 @@ export default function Header() {
             <Link href={"/login"} className="grid">
               <Button
                 className="whitespace-nowrap border border-[#141414] rounded-xl"
-                variant={ButtonVariants.BlackOutlinedRounded}
+                variant={ButtonVariants.BlackFilledRounded}
               >
                 Sign Out
+              </Button>
+              {/* Here */}
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.PrimaryFilled}
+              >
+                PF
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.PrimaryFilledRounded}
+              >
+                PFR
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.PrimaryOutlined}
+              >
+                PO
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.PrimaryOutlinedRounded}
+              >
+                POR
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.DangerFilled}
+              >
+                DF
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.DangerOutlined}
+              >
+                DO
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.Default}
+              >
+                Default
+              </Button>
+              <Button
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
+                variant={ButtonVariants.WhiteFilledRounded}
+              >
+                WF
               </Button>
             </Link>
           </div>

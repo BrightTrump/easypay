@@ -25,7 +25,7 @@ export default function NavigationItem({
   return (
     <button
       onClick={handleOnClick}
-      className={`text-[#141414] text-left text-2xl lg:text-base font-medium grid grid-flow-col items-center gap-1 cursor-pointer ${className}`}
+      className={`text-[#141414] text-left text-2xl lg:text-base font-medium grid grid-flow-col items-center gap-1 cursor-pointer hover:border-b-2 hover:border-[#003DA6] ${className}`}
     >
       {children}
     </button>

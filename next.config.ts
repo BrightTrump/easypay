@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig = {
   images: {
-    domains: ["www.theforage.com", "img.freepik.com", "www.shutterstock.com"],
+    domains: ["www.theforage.com", "neu.edu.tr", "www.shutterstock.com"],
   },
 };
 
