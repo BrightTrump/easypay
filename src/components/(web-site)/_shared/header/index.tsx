@@ -1,5 +1,11 @@
 "use client";
 import React from "react";
+import LogoImage from "../logo/Logo";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Navigation from "./navigation/navigation";
+import { Button } from "@/ui/button";
+import { ButtonVariants } from "@/ui/button/types";
 export default function Header() {
   const pathName = usePathname();
 
@@ -7,7 +13,10 @@ export default function Header() {
     <header className="py-5 layout-spacing z-20 sticky bg-white top-0 left-0 w-full">
       <div className="container mx-auto grid grid-flow-col justify-between lg:grid-cols-[auto_1fr_auto] items-center gap-8 lg:gap-16">
         {/* Logo */}
-        <Logo variant="black" className="w-32 mx-auto" />
+        <p className="w-32 mx-auto">
+          Home<span className="text-primary">lands</span>
+        </p>
+        {/* <LogoImage variant="black" className="w-32 mx-auto" /> */}
 
         {/* Navigation  */}
         <Navigation />
@@ -19,15 +28,6 @@ export default function Header() {
               variant={ButtonVariants.BlackOutlinedRounded}
             >
               Sign in
-            </Button>
-          </Link>
-          <Link
-            href={ENTOBO_BOOK_A_DEMO_LINK}
-            target="_blank"
-            className="grid whitespace-nowrap"
-          >
-            <Button variant={ButtonVariants.BlackFilledRounded}>
-              Book a demo
             </Button>
           </Link>
         </div>
