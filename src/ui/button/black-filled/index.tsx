@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonProps } from "../types";
 
-export default function PrimaryFilledRounded({
+export default function BlackFilled({
   children,
   className,
   disabled,
@@ -14,7 +14,7 @@ export default function PrimaryFilledRounded({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 bg-[#003DA6] border border-[#003DA6] text-white rounded-full items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 rounded-xl bg-black border border-black text-white items-center justify-center font-medium text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

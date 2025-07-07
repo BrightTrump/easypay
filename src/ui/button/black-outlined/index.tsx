@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonProps } from "../types";
 
-export default function WhiteFilledRounded({
+export default function BlackOutlined({
   children,
   className,
   disabled,
@@ -14,7 +14,7 @@ export default function WhiteFilledRounded({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2  rounded-xl bg-white border border-white text-[#555555] items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 rounded-xl bg-white border border-black text-black items-center justify-center font-medium text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

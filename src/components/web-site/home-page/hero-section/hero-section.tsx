@@ -30,7 +30,7 @@ export default function HeroSection() {
             <div>
               <Link href="/" target="_blank">
                 <Button
-                  variant={ButtonVariants.Neutral}
+                  variant={ButtonVariants.PrimaryFilled}
                   className="w-max cursor-pointer"
                 >
                   Online Banking

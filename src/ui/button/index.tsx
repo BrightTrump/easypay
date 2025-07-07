@@ -6,11 +6,8 @@ import DangerOutlined from "./danger-outlined";
 import Default from "./default";
 import DangerFilled from "./danger-filled";
 import Neutral from "./neutral";
-import WhiteFilledRounded from "./white-filled-rounded";
-import PrimaryOutlinedRounded from "./primary-outlined-rounded";
-import PrimaryFilledRounded from "./primary-filled-rounded";
-import BlackFilledRounded from "./black-filled-rounded";
-import BlackOutlinedRounded from "./black-outlined-rounded";
+import BlackFilledRounded from "./black-filled";
+import BlackOutlinedRounded from "./black-outlined";
 
 export function Button(props: ButtonProps) {
   switch (props.variant) {

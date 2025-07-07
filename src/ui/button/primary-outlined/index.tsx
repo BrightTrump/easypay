@@ -14,7 +14,7 @@ export default function PrimaryOutlined({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 bg-[#F1F3F9] text-primary rounded-sm items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 border border-[#003DA6] text-[#003DA6] bg-[#F1F3F9] rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >
