@@ -19,6 +19,5 @@ export enum ButtonVariants {
   PrimaryFilledRounded = "primary-filled-rounded",
   PrimaryOutlined = "primary-outlined",
   WhiteFilledRounded = "white-filled-rounded",
-  WhiteOutlinedRounded = "white-outlined-rounded",
   PrimaryOutlinedRounded = "pimary-outlined-rounded",
 }

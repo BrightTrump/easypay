@@ -7,7 +7,6 @@ import Default from "./default";
 import DangerFilled from "./danger-filled";
 import Neutral from "./neutral";
 import WhiteFilledRounded from "./white-filled-rounded";
-import WhiteOutlinedRounded from "./white-outlined-rounded";
 import PrimaryOutlinedRounded from "./primary-outlined-rounded";
 import PrimaryFilledRounded from "./primary-filled-rounded";
 import BlackFilledRounded from "./black-filled-rounded";
@@ -43,9 +42,6 @@ export function Button(props: ButtonProps) {
 
     case ButtonVariants.WhiteFilledRounded:
       return <WhiteFilledRounded {...props} />;
-
-    case ButtonVariants.WhiteOutlinedRounded:
-      return <WhiteOutlinedRounded {...props} />;
 
     default:
       return <Default {...props} />;
