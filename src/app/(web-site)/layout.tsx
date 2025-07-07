@@ -1,4 +1,4 @@
-import Header from "@/components/(web-site)/_shared/header";
+import Header from "@/components/web-site/_shared/header";
 
 export default function WebsiteLayout({
   children,
