@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 // External background images
 const slideImages = [
   "https://www.theforage.com/blog/wp-content/uploads/2022/09/what-is-commercial-banking-scaled.jpg",
-  "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
-  "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d",
+  "https://img.freepik.com/premium-photo/international-exchange-coin-currency-money-economy-cash-financial-business-3d-black-background-global-finance-banking-market-euro-dollar-yen-pound-ruble-wealth-world-map-foreign-transfer-concept_79161-2885.jpg",
+  "https://www.shutterstock.com/image-vector/online-banking-technology-conceptisometric-illustration-260nw-2279428249.jpg",
 ];
 
 export default function HeroBackground() {
@@ -35,7 +35,8 @@ export default function HeroBackground() {
           priority={index === 0}
         />
       ))}
-      {/* <div className="absolute inset-0 bg-white/20 backdrop-blur-sm" /> */}
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black" />
     </div>
   );
 }
