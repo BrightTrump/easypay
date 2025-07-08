@@ -2,7 +2,6 @@
 
 import { CARD_SCHEMA } from "@/constants.ts/data.constants";
 import { Icon } from "@/ui/icons";
-import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
 import React from "react";
 
