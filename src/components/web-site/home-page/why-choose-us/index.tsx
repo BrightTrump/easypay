@@ -1,30 +1,28 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Icons } from "@/ui/icons/types";
-import { Icon } from "@/ui/icons";
 
-const ServicesIcons = [
-  {
-    title: "Withdraw Funds",
-    description:
-      "Withdrawing money from your account is quick, secure, and easy. You can transfer funds to any linked bank account, mobile wallet, or card.",
-    icon: Icons.Home,
-  },
-  {
-    title: "Deposit Funds",
-    description:
-      "We have two deposit schemes for you, one is Deposit Pension Scheme and another one is the Fixed Deposit Receipt.",
-    icon: Icons.Bag,
-  },
-  {
-    title: "Fast Transfer",
-    description:
-      "Send money instantly and securely with one tap. Just select a recipient, enter an amount, and transfer securely. Quick, easy, and hassle-free.",
-    icon: Icons.CreditCard,
-  },
-];
+// const ServicesIcons = [
+//   {
+//     title: "Withdraw Funds",
+//     description:
+//       "Withdrawing money from your account is quick, secure, and easy. You can transfer funds to any linked bank account, mobile wallet, or card.",
+//     icon: Icons.Home,
+//   },
+//   {
+//     title: "Deposit Funds",
+//     description:
+//       "We have two deposit schemes for you, one is Deposit Pension Scheme and another one is the Fixed Deposit Receipt.",
+//     icon: Icons.Bag,
+//   },
+//   {
+//     title: "Fast Transfer",
+//     description:
+//       "Send money instantly and securely with one tap. Just select a recipient, enter an amount, and transfer securely. Quick, easy, and hassle-free.",
+//     icon: Icons.CreditCard,
+//   },
+// ];
 
 export default function WhyChooseUs() {
   return (
