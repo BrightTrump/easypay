@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -7,7 +8,13 @@ export default function WhyChooseUs() {
   return (
     <section className="relative w-full py-10 sm:py-20 layout-spacing">
       {/* Content & Images Grid */}
-      <div className="inset-0 grid gap-5 md:grid-cols-2 items-center px-6 lg:px-20 z-10">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="inset-0 grid gap-5 md:grid-cols-2 items-center px-6 lg:px-20 z-10"
+      >
         {/* Text Content */}
         <div className="max-w-60 sm:max-w-xl grid gap-16">
           <div className="grid gap-4 text-center sm:text-left">
@@ -60,7 +67,7 @@ export default function WhyChooseUs() {
             className="absolute  bottom-[-15] left-0 "
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

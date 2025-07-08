@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -7,7 +8,13 @@ export default function AboutUs() {
   return (
     <section className="relative w-full py-10 sm:py-20 layout-spacing">
       {/* Content & Images Grid */}
-      <div className="inset-0 grid gap-10 md:grid-cols-2 items-center px-6 lg:px-20 z-10">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="inset-0 grid gap-10 md:grid-cols-2 items-center px-6 lg:px-20 z-10"
+      >
         {/* Image Section */}
         <div className="relative h-[500px] rounded-xl overflow-hidden">
           {/* Main Image */}
@@ -40,9 +47,9 @@ export default function AboutUs() {
           <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_p]:text-[#939191]">
             <div>
               <p>
-                We're here to help you examine investment and retirement options
-                as you work toward your goals, regardless of where you are in
-                the planning process.
+                We&apos;re here to help you examine investment and retirement
+                options as you work toward your goals, regardless of where you
+                are in the planning process.
               </p>
             </div>
             <div className="flex gap-5">
@@ -67,7 +74,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
