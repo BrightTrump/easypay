@@ -44,10 +44,10 @@ const ourServices = [
   },
 ];
 
-export default function OurServices() {
+export default function Card() {
   return (
     <motion.section
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
@@ -55,9 +55,9 @@ export default function OurServices() {
     >
       {/* Header */}
       <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center ">
-        <p className="text-[#555555]">Our Services</p>
+        <p className="text-[#555555]">Card</p>
         <h3 className="font-bold text-3xl sm:text-3xl md:text-4xl leading-normal">
-          We Offer Best Financial Consultancy Services in Affordable Cost
+          Our Card Ratings
         </h3>
       </div>
 

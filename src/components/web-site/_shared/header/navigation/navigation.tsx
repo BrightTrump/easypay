@@ -8,9 +8,10 @@ export default function Navigation() {
     <>
       {/* <MobileNavigation /> */}
 
-      <div className="hidden lg:grid grid-flow-col gap-5 w-max items-center hover:border-2">
+      <div className="hidden lg:grid grid-flow-col gap-5 w-max items-center hover:text-[#285ab1]">
         <NavigationItem url="/">Home</NavigationItem>
         <NavigationItem url="/about-us">About Us</NavigationItem>
+        <NavigationItem url="/">Card</NavigationItem>
       </div>
     </>
   );

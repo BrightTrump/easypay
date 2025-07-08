@@ -1,9 +1,9 @@
 "use client";
 
+import React from "react";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
-import React from "react";
 
 const features = [
   { label: "Mortgage", icon: Icons.Home },

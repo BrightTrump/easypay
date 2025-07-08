@@ -24,16 +24,16 @@ export default function Header() {
           <div className="hidden lg:grid grid-cols-2 gap-3 [&_Button]:cursor-pointer">
             <Link href={"/login"} className="grid">
               <Button
-                className="whitespace-nowrap border border-[#141414] rounded-xl"
                 variant={ButtonVariants.BlackOutlined}
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
               >
                 Sign in
               </Button>
             </Link>
             <Link href={"/login"} className="grid">
               <Button
-                className="whitespace-nowrap border border-[#141414] rounded-xl"
                 variant={ButtonVariants.BlackFilled}
+                className="whitespace-nowrap border border-[#141414] rounded-xl"
               >
                 Sign Out
               </Button>
