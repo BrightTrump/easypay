@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Image Section */}
-        <div className="relative z-20 h-[500px] rounded-xl overflow-hidden">
+        <div className="relative h-[500px] rounded-xl overflow-hidden">
           {/* Main Image */}
           <Image
             src="/about-3.png"
