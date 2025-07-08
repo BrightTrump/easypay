@@ -19,7 +19,7 @@ export default function FeatureSection() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="py-10 sm:py-20 layout-spacing grid gap-10 sm:gap-20"
+      className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20"
     >
       {/* Header */}
       <div className="mx-auto grid place-items-center gap-4 text-center">

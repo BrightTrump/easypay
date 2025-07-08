@@ -46,7 +46,7 @@ export default function Services() {
         />
 
         {/* Overlay content on the image */}
-        <div className="absolute inset-0 grid md:grid-cols-2 items-center px-6 lg:px-20 z-10 text-white bg-black/50">
+        <div className="absolute inset-0 grid md:grid-cols-2 items-center px-6 lg:px-16 z-10 text-white bg-black/50">
           <div className="grid gap-4">
             <p className="text-[#e0e0e0] text-xl">Services</p>
             <h3 className="font-bold text-2xl lg:text-4xl">
