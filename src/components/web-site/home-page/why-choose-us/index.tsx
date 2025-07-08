@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
   return (
     <section className="relative w-full py-10 sm:py-20 layout-spacing">
       {/* Content & Images Grid */}
-      <div className="inset-0 grid justify-between md:grid-cols-2 items-center px-6 lg:px-20 z-10">
+      <div className="inset-0 grid gap-5 md:grid-cols-2 items-center px-6 lg:px-20 z-10">
         {/* Text Content */}
         <div className="max-w-lg grid gap-16">
           <div className="grid gap-4">
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
             </h3>
           </div>
 
-          <div className="grid gap-20 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_h3]:text-[#285ab1] [&_p]:text-[#939191]">
+          <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_h3]:text-[#285ab1] [&_p]:text-[#939191]">
             <div className="flex gap-5">
               <span>1</span>
               <div>
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Image Section */}
-        <div className="relative z-20  h-[500px] rounded-xl overflow-hidden">
+        <div className="relative z-20 h-[500px] rounded-xl overflow-hidden">
           {/* Main Image */}
           <Image
             src="/about-3.png"
