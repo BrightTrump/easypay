@@ -15,7 +15,7 @@ export default function Card() {
       className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20 h-full bg-[#f9f5f5]"
     >
       {/* Header */}
-      <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center ">
+      <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center">
         <p className="text-[#555555]">Card</p>
         <h3 className="font-bold text-3xl sm:text-3xl md:text-4xl leading-normal">
           Our Card Ratings
@@ -23,7 +23,7 @@ export default function Card() {
       </div>
 
       {/* Our Services Grid */}
-      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl overflow-hidden">
+      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20 overflow-hidden">
         {CARD_SCHEMA.map((item, index) => (
           <motion.div
             key={index}
