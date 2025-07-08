@@ -30,7 +30,7 @@ export default function FeatureSection() {
       </div>
 
       {/* Features Grid */}
-      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-4 bg-white rounded-xl shadow-sm divide-y sm:divide-y-0 divide-black/10 overflow-hidden">
+      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-4 bg-white rounded-xl divide-y sm:divide-y-0 divide-black/10 overflow-hidden">
         {features.map((feature, index) => (
           <motion.div
             key={index}

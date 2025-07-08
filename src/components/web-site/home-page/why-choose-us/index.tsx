@@ -1,29 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
-// import { Icons } from "@/ui/icons/types";
-
-// const ServicesIcons = [
-//   {
-//     title: "Withdraw Funds",
-//     description:
-//       "Withdrawing money from your account is quick, secure, and easy. You can transfer funds to any linked bank account, mobile wallet, or card.",
-//     icon: Icons.Home,
-//   },
-//   {
-//     title: "Deposit Funds",
-//     description:
-//       "We have two deposit schemes for you, one is Deposit Pension Scheme and another one is the Fixed Deposit Receipt.",
-//     icon: Icons.Bag,
-//   },
-//   {
-//     title: "Fast Transfer",
-//     description:
-//       "Send money instantly and securely with one tap. Just select a recipient, enter an amount, and transfer securely. Quick, easy, and hassle-free.",
-//     icon: Icons.CreditCard,
-//   },
-// ];
-
 export default function WhyChooseUs() {
   return (
     <section className="relative w-full py-10 sm:py-20 layout-spacing">
@@ -60,25 +38,25 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Features Grid (resting on image) */}
-      {/* <div className="-mt-24 container mx-auto grid gap-6 md:grid-cols-3 px-4 lg:px-0">
-        {ServicesIcons.map((card, index) => (
-          <div
-            key={index}
-            className="grid place-items-center gap-4 p-8 bg-[#F7F8FA] rounded-xl shadow-md"
-          >
-            <div className="bg-[#285ab1] rounded-full p-4">
-              <Icon type={card.icon} size={60} color="#FFFFFF" />
-            </div>
-            <div className="grid gap-5 text-center">
-              <h2 className="text-2xl font-semibold">{card.title}</h2>
-              <p className="text-[#555555]">{card.description}</p>
-            </div>
+        {/* Images */}
+        <div className="relative z-20 w-full h-[500px] rounded-xl overflow-hidden">
+          <Image
+            src="/about-3.png"
+            alt="About Us"
+            fill
+            className="object-cover"
+          />
+          <div className="relative top-4 right-4 z-20">
+            <Image
+              src="/about-4.png"
+              alt="About Us"
+              fill
+              className="object-cover"
+            />
           </div>
-        ))}
-      </div> */}
+        </div>
+      </div>
     </section>
   );
 }
