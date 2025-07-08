@@ -3,7 +3,6 @@
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 import Image from "next/image";
 import React from "react";
 
@@ -74,7 +73,7 @@ export default function AboutUs() {
                  hover:bg-right"
                 >
                   <Icon type={items.icon} size={20} color="#285ab1" />
-                  <div className="">{items.title}</div>
+                  <div>{items.title}</div>
                 </div>
               ))}
             </div>
