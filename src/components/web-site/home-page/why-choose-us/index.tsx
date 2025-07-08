@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Icons } from "@/ui/icons/types";
+// import { Icons } from "@/ui/icons/types";
 
 // const ServicesIcons = [
 //   {
