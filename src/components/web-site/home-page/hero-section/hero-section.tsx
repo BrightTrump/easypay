@@ -12,7 +12,7 @@ export default function HeroSection() {
     >
       {/* Background Image */}
       <SectionImage />
-      <div className="relative grid container mx-auto">
+      <div className="relative grid px-6 lg:px-20">
         {/* Content */}
         <div className="max-md sm:max-w-2xl grid gap-24">
           <div className=" grid gap-8 text-white text-center md:text-left">
