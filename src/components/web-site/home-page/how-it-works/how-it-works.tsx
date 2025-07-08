@@ -43,7 +43,7 @@ export default function HowItWorks() {
         <div className="grid gap-4 text-center">
           <p className="text-xl text-[#285ab1]">How It Works</p>
           <h3 className="font-bold text-2xl lg:text-4xl">
-            It's Easy To Join With Us.
+            It&apos;s Easy To Join With Us.
           </h3>
         </div>
 
