@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
             </h3>
           </div>
 
-          <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_h3]:text-[#285ab1] [&_p]:text-[#939191]">
+          <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_p]:text-[#939191]">
             <div className="flex gap-5">
               <span>1</span>
               <div>
