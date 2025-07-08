@@ -2,32 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { Icons } from "@/ui/icons/types";
 import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
+import { SERVICES_ICONS_SCHEMA } from "@/constants.ts/data.constants";
 
-const ServicesIcons = [
-  {
-    title: "Withdraw Funds",
-    description:
-      "Withdrawing money from your account is quick, secure, and easy. You can transfer funds to any linked bank account, mobile wallet, or card.",
-    icon: Icons.Home,
-  },
-  {
-    title: "Deposit Funds",
-    description:
-      "We have two deposit schemes for you, one is Deposit Pension Scheme and another one is the Fixed Deposit Receipt.",
-    icon: Icons.Bag,
-  },
-  {
-    title: "Fast Transfer",
-    description:
-      "Send money instantly and securely with one tap. Just select a recipient, enter an amount, and transfer securely. Quick, easy, and hassle-free.",
-    icon: Icons.CreditCard,
-  },
-];
-
-export default function Services() {
+export default function BestServices() {
   return (
     <motion.section
       initial={{ opacity: 0, x: 100 }}
@@ -56,9 +35,9 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Features Grid (resting on image) */}
+      {/* Best Services Grid (resting on image) */}
       <div className="-mt-24 z-10 relative grid gap-6 md:grid-cols-3 px-6 lg:px-20">
-        {ServicesIcons.map((card, index) => (
+        {SERVICES_ICONS_SCHEMA.map((card, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}

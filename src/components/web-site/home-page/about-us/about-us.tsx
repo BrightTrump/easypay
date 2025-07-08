@@ -3,18 +3,10 @@
 import React from "react";
 import { useCounter } from "@/components/hooks/counter.hooks";
 import { Icon } from "@/ui/icons";
-import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/data.constants";
 
-const aboutUsCards = [
-  { title: "Retirement", icon: Icons.Check },
-  { title: "International Payments", icon: Icons.Check },
-  { title: "Funding an Education", icon: Icons.Check },
-  { title: "Major Purchases", icon: Icons.Check },
-  { title: "Premium Support", icon: Icons.Check },
-  { title: "Direct Debit", icon: Icons.Check },
-];
 export default function AboutUs() {
   const { count, countRef } = useCounter(25, 5000);
   return (
@@ -40,10 +32,12 @@ export default function AboutUs() {
           {/* Overlapping Image */}
           <div
             ref={countRef}
-            className="absolute -top-2 right-0 z-10 text-[#285ab1] grid gap-5 place-items-center font-bold bg-white rounded-xl p-2 sm:px-4 sm:py-8 border border-[#555555] shadow-sm"
+            className="absolute -top-2 right-0 z-10 text-[#285ab1] text-center grid gap-5 place-items-center font-bold bg-white rounded-xl p-4 sm:px-4 sm:py-8 border border-[#555555] shadow-sm"
           >
             <h1 className="text-3xl sm:text-6xl">{count}</h1>
-            <p className="text-2xl sm:text-3xl">Years of Experience</p>
+            <p className="text-2xl sm:text-3xl max-w-28 sm:max-w-44">
+              Years of Experience
+            </p>
           </div>
         </div>
 
@@ -65,8 +59,8 @@ export default function AboutUs() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-2">
-              {aboutUsCards.map((items, index) => (
+            <div className="grid lg:grid-cols-2 gap-2">
+              {ABOUT_US_CARD_SCHEMA.map((items, index) => (
                 <div
                   key={index}
                   className="flex gap-2 items-center bg-[#c3c0c0] text-white rounded-xl p-2 bg-gradient-to-r from-[#c3c0c0] to-[#285ab1]

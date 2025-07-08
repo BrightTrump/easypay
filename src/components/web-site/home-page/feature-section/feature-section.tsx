@@ -2,15 +2,8 @@
 
 import React from "react";
 import { Icon } from "@/ui/icons";
-import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
-
-const features = [
-  { label: "Mortgage", icon: Icons.Home },
-  { label: "Business", icon: Icons.Bag },
-  { label: "CreditCards", icon: Icons.CreditCard },
-  { label: "Savings", icon: Icons.Savings },
-];
+import { FEATURES_SCHEMA } from "@/constants.ts/data.constants";
 
 export default function FeatureSection() {
   return (
@@ -31,7 +24,7 @@ export default function FeatureSection() {
 
       {/* Features Grid */}
       <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-4 bg-white rounded-xl divide-y sm:divide-y-0 divide-black/10 overflow-hidden">
-        {features.map((feature, index) => (
+        {FEATURES_SCHEMA.map((feature, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
@@ -46,7 +39,7 @@ export default function FeatureSection() {
             </h2>
 
             {/* Vertical Divider - hide for last item */}
-            {index < features.length - 1 && (
+            {index < FEATURES_SCHEMA.length - 1 && (
               <div className="absolute right-0 top-2 -translate-y-1/2 h-64 w-px bg-black/20" />
             )}
           </motion.div>
