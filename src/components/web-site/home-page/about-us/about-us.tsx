@@ -1,11 +1,11 @@
 "use client";
 
+import React from "react";
 import { useCounter } from "@/components/hooks/counter.hooks";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
 
 const aboutUsCards = [
   { title: "Retirement", icon: Icons.Check },
