@@ -17,7 +17,7 @@ export default function DangerCircle({ color, size }: IconProps) {
         />
         <path
           d="M8.99805 5.25V9.75M16.498 9C16.498 13.1421 13.1402 16.5 8.99805 16.5C4.85591 16.5 1.49805 13.1421 1.49805 9C1.49805 4.85786 4.85591 1.5 8.99805 1.5C13.1402 1.5 16.498 4.85786 16.498 9Z"
-          stroke="#252525"
+          stroke={color}
           strokeWidth="1.53"
           strokeLinecap="round"
         />

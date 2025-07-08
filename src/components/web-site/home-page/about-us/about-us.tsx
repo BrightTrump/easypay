@@ -21,7 +21,7 @@ export default function AboutUs() {
     <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
@@ -40,10 +40,10 @@ export default function AboutUs() {
           {/* Overlapping Image */}
           <div
             ref={countRef}
-            className="absolute -top-2 right-0 z-10 text-[#285ab1] grid gap-5 place-items-center font-bold bg-white rounded-xl px-4 py-8 border border-[#555555] shadow-sm"
+            className="absolute -top-2 right-0 z-10 text-[#285ab1] grid gap-5 place-items-center font-bold bg-white rounded-xl p-2 sm:px-4 sm:py-8 border border-[#555555] shadow-sm"
           >
-            <h1 className="text-6xl">{count}</h1>
-            <p className="text-3xl">Years of Experience</p>
+            <h1 className="text-3xl sm:text-6xl">{count}</h1>
+            <p className="text-2xl sm:text-3xl">Years of Experience</p>
           </div>
         </div>
 

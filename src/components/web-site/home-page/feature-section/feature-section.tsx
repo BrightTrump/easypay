@@ -38,9 +38,9 @@ export default function FeatureSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 3, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="grid place-items-center gap-2 px-4 py-6 relative"
+            className="grid place-items-center gap-5 px-4 py-6 relative"
           >
-            <Icon type={feature.icon} size={60} color="#285ab1" />
+            <Icon type={feature.icon} size={80} color="#285ab1" />
             <h2 className="text-2xl font-semibold text-center">
               {feature.label}
             </h2>

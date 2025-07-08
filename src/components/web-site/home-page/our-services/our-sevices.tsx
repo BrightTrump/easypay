@@ -5,11 +5,43 @@ import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
 import React from "react";
 
-const features = [
-  { label: "Mortgage", icon: Icons.Home },
-  { label: "Business", icon: Icons.Bag },
-  { label: "CreditCards", icon: Icons.CreditCard },
-  { label: "Savings", icon: Icons.Savings },
+const ourServices = [
+  {
+    label: "Business Advising",
+    icon: Icons.User,
+    description:
+      "Empower your business with expert advice and strategic insights to drive growth and success.",
+  },
+  {
+    label: "Finacial Planning",
+    icon: Icons.Bag,
+    description:
+      "Plan your financial future with precision and confidence, tailored to your unique goals and needs.",
+  },
+  {
+    label: "Savings",
+    icon: Icons.Savings,
+    description:
+      "Maximize your wealth with smart savings strategies and diverse investment opportunities.",
+  },
+  {
+    label: "Tax Consultancy",
+    icon: Icons.Billing,
+    description:
+      "Navigate the complexities of tax regulations with our comprehensive and personalized tax consultancy services.",
+  },
+  {
+    label: "Risk Management",
+    icon: Icons.DangerCircle,
+    description:
+      "Mitigate risks and protect your assets with our robust risk management solutions.",
+  },
+  {
+    label: "Trade & Stock",
+    icon: Icons.UserGroup,
+    description:
+      "Enhance your trading prowess and stock portfolio with cutting-edge tools and expert guidance.",
+  },
 ];
 
 export default function OurServices() {
@@ -19,36 +51,32 @@ export default function OurServices() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20"
+      className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20 bg-[#f9f5f5]"
     >
       {/* Header */}
-      <div className="mx-auto grid place-items-center gap-4 text-center">
-        <p className="text-[#555555]">Great Offer for Great Experience</p>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl">
-          Choose What&apos;s Right for You
+      <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center ">
+        <p className="text-[#555555]">Our Services</p>
+        <h3 className="font-bold text-3xl sm:text-3xl md:text-4xl leading-normal">
+          We Offer Best Financial Consultancy Services in Affordable Cost
         </h3>
       </div>
 
-      {/* Features Grid */}
-      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-4 bg-white rounded-xl divide-y sm:divide-y-0 divide-black/10 overflow-hidden">
-        {features.map((feature, index) => (
+      {/* Our Services Grid */}
+      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl overflow-hidden">
+        {ourServices.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 3, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="grid place-items-center gap-2 px-4 py-6 relative"
+            className="grid place-items-center gap-5 p-4 bg-white [&>div]:grid [&>div]:gap-4 [&>div]:text-center "
           >
-            <Icon type={feature.icon} size={60} color="#285ab1" />
-            <h2 className="text-2xl font-semibold text-center">
-              {feature.label}
-            </h2>
-
-            {/* Vertical Divider - hide for last item */}
-            {index < features.length - 1 && (
-              <div className="absolute right-0 top-2 -translate-y-1/2 h-64 w-px bg-black/20" />
-            )}
+            <Icon type={item.icon} size={80} color="#285ab1" />
+            <div>
+              <h2 className="text-2xl font-semibold">{item.label}</h2>
+              <p>{item.description}</p>
+            </div>
           </motion.div>
         ))}
       </div>
