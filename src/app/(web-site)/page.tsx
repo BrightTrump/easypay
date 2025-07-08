@@ -3,6 +3,7 @@ import FeatureSection from "@/components/web-site/home-page/feature-section/feat
 import Services from "@/components/web-site/home-page/services/services";
 import WhyChooseUs from "@/components/web-site/home-page/why-choose-us";
 import HowItWorks from "@/components/web-site/home-page/how-it-works/how-it-works";
+import AboutUs from "@/components/web-site/home-page/about-us/about-us";
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <Services />
       <WhyChooseUs />
       <HowItWorks />
+      <AboutUs />
     </main>
   );
 }
