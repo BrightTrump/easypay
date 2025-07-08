@@ -1,12 +1,23 @@
 "use client";
 
+import { Icon } from "@/ui/icons";
+import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 import Image from "next/image";
 import React from "react";
 
+const aboutUsCards = [
+  { title: "Retirement", icon: Icons.Check },
+  { title: "International Payments", icon: Icons.Check },
+  { title: "Funding an Education", icon: Icons.Check },
+  { title: "Major Purchases", icon: Icons.Check },
+  { title: "Premium Support", icon: Icons.Check },
+  { title: "Direct Debit", icon: Icons.Check },
+];
 export default function AboutUs() {
   return (
-    <section className="relative w-full py-10 sm:py-20 layout-spacing">
+    <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -36,7 +47,7 @@ export default function AboutUs() {
         </div>
 
         {/* Text Content */}
-        <div className="grid gap-16">
+        <div className="grid gap-8">
           <div className="grid gap-4">
             <p className="text-[#285ab1] text-xl">About Us</p>
             <h3 className="font-bold text-2xl lg:text-4xl">
@@ -44,33 +55,28 @@ export default function AboutUs() {
             </h3>
           </div>
 
-          <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_p]:text-[#939191]">
+          <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] ">
             <div>
-              <p>
+              <p className="text-[#939191]">
                 We&apos;re here to help you examine investment and retirement
                 options as you work toward your goals, regardless of where you
                 are in the planning process.
               </p>
             </div>
-            <div className="flex gap-5">
-              <span>1</span>
-              <div>
-                <h3>Lowest Transaction Fee</h3>
-                <p>
-                  Internal, Domestic, International, and Fast Transfers are done
-                  at a cheaper fee.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-5">
-              <span>2</span>
-              <div>
-                <h3>Secure Service</h3>
-                <p>
-                  End-to-End-Encryption, Session Timeout and Auto-Logout,
-                  Real-Time Alerts, and Secure Data Storage.
-                </p>
-              </div>
+
+            <div className="grid sm:grid-cols-2 gap-2">
+              {aboutUsCards.map((items, index) => (
+                <div
+                  key={index}
+                  className="flex gap-2 items-center bg-[#c3c0c0] text-white rounded-xl p-2 bg-gradient-to-r from-[#c3c0c0] to-[#285ab1]
+                 bg-[length:200%_100%] bg-left
+                 transition-all duration-500 ease-in-out
+                 hover:bg-right"
+                >
+                  <Icon type={items.icon} size={20} color="#285ab1" />
+                  <div className="">{items.title}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
