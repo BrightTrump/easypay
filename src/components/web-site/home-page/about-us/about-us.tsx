@@ -1,10 +1,11 @@
 "use client";
 
+import { useCounter } from "@/components/hooks/counter.hooks";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const aboutUsCards = [
   { title: "Retirement", icon: Icons.Check },
@@ -15,6 +16,7 @@ const aboutUsCards = [
   { title: "Direct Debit", icon: Icons.Check },
 ];
 export default function AboutUs() {
+  const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
@@ -29,20 +31,20 @@ export default function AboutUs() {
         <div className="relative h-[500px] rounded-xl overflow-hidden">
           {/* Main Image */}
           <Image
-            src="/about-3.png"
+            src="/slider-1.jpg"
             alt="About Us"
             fill
             className="object-cover w-full h-full rounded-xl"
           />
 
           {/* Overlapping Image */}
-          <Image
-            src="/about-4.png"
-            alt="About Icon"
-            width={300}
-            height={400}
-            className="absolute  bottom-[-15] left-0 "
-          />
+          <div
+            ref={countRef}
+            className="absolute -top-2 right-0 z-10 text-[#285ab1] grid gap-5 place-items-center font-bold bg-white rounded-xl px-4 py-8 border border-[#555555] shadow-sm"
+          >
+            <h1 className="text-6xl">{count}</h1>
+            <p className="text-3xl">Years of Experience</p>
+          </div>
         </div>
 
         {/* Text Content */}
