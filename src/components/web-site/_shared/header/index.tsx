@@ -12,7 +12,7 @@ export default function Header() {
       <div className="container mx-auto grid grid-flow-col justify-between lg:grid-cols-[1fr_auto] items-center gap-8 lg:gap-16">
         {/* Logo */}
         <p className="text-3xl font-bold">
-          Home<span className="text-[#003DA6]">lands</span>
+          Easy<span className="text-[#003DA6]">Pay</span>
         </p>
         {/* <LogoImage variant="black" className="w-32 mx-auto" /> */}
 

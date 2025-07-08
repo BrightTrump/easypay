@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Icons } from "@/ui/icons/types";
 import { Icon } from "@/ui/icons";
+import { motion } from "framer-motion";
 
 const ServicesIcons = [
   {
@@ -28,7 +29,13 @@ const ServicesIcons = [
 
 export default function Services() {
   return (
-    <section className="relative w-full py-10 sm:py-20 layout-spacing">
+    <motion.section
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="relative w-full py-10 sm:py-20 layout-spacing"
+    >
       {/* Image as background */}
       <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
         <Image
@@ -52,20 +59,24 @@ export default function Services() {
       {/* Features Grid (resting on image) */}
       <div className="-mt-24 relative z-20 container mx-auto grid gap-6 md:grid-cols-3 px-4 lg:px-0">
         {ServicesIcons.map((card, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 3, delay: index * 0.2 }}
+            viewport={{ once: true }}
             className="grid place-items-center gap-4 p-8 bg-[#F7F8FA] rounded-xl shadow-md"
           >
             <div className="bg-[#285ab1] rounded-full p-4">
               <Icon type={card.icon} size={60} color="#FFFFFF" />
             </div>
-            <div className="grid gap-5 text-center">
+            <div className="grid gap-2 text-center">
               <h2 className="text-2xl font-semibold">{card.title}</h2>
               <p className="text-[#555555]">{card.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

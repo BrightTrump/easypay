@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="max-md sm:max-w-2xl grid gap-24">
           <div className=" grid gap-8 text-white text-center md:text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold ">
-              Welcome to <span className="text-[#285ab1]">Homelands</span>
+              Welcome to <span className="text-[#285ab1]">EasyPay</span>
             </h1>
             <span>
               We simplify banking so you can focus on what&apos;s most important
@@ -26,12 +26,12 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <Link href="/login" target="_blank">
+          <Link href="/sign-up" target="_blank">
             <Button
               variant={ButtonVariants.BlackFilled}
               className="w-max cursor-pointer mx-auto sm:mx-0"
             >
-              Online Banking
+              Bank With Us
             </Button>
           </Link>
         </div>

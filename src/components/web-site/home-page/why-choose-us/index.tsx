@@ -30,27 +30,42 @@ export default function WhyChooseUs() {
   return (
     <section className="relative w-full py-10 sm:py-20 layout-spacing">
       {/* Image as background */}
-      <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-        <Image
-          src="/about-2.jpg"
-          alt="About Us"
-          fill
-          className="object-cover"
-        />
-
-        {/* Overlay content on the image */}
-        <div className="absolute inset-0 grid md:grid-cols-2 items-center px-6 lg:px-20 z-10 text-white bg-black/50">
+      <div className="inset-0 grid md:grid-cols-2 items-center px-6 lg:px-20 z-10 ">
+        <div className="grid gap-16">
           <div className="grid gap-4">
-            <p className="text-[#e0e0e0] text-xl">Services</p>
+            <p className="text-[#555555] text-xl">Why Choose Us</p>
             <h3 className="font-bold text-2xl lg:text-4xl">
-              We Make Your Life Comfortable With Our Services.
+              We Are Giving You the Best Service.
             </h3>
+          </div>
+
+          <div className="grid gap-20 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] [&_p]:text-[#939191]">
+            <div className="flex gap-5">
+              <span className="">1</span>
+              <div>
+                <h3>Lowest Transaction Fee</h3>
+                <p>
+                  Internal, Domestic, International, and Fast Transfers are done
+                  at a cheaper fee.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5">
+              <span>2</span>
+              <div>
+                <h3>Secure Service</h3>
+                <p>
+                  End-to-End-Encryption, Session Timeout and Auto-Logout,
+                  Real-Time Alerts, and Secure Data Storage.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Features Grid (resting on image) */}
-      <div className="-mt-24 relative z-20 container mx-auto grid gap-6 md:grid-cols-3 px-4 lg:px-0">
+      {/* <div className="-mt-24 container mx-auto grid gap-6 md:grid-cols-3 px-4 lg:px-0">
         {ServicesIcons.map((card, index) => (
           <div
             key={index}
@@ -65,7 +80,7 @@ export default function WhyChooseUs() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
