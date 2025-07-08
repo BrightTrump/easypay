@@ -101,3 +101,42 @@ export const HOW_IT_WORK_ITEMS_SCHEMA = [
     steps: "4",
   },
 ];
+
+export const CARD_SCHEMA = [
+  {
+    label: "Business Advising",
+    icon: Icons.User,
+    description:
+      "Empower your business with expert advice and strategic insights to drive growth and success.",
+  },
+  {
+    label: "Finacial Planning",
+    icon: Icons.Bag,
+    description:
+      "Plan your financial future with precision and confidence, tailored to your unique goals and needs.",
+  },
+  {
+    label: "Savings",
+    icon: Icons.Savings,
+    description:
+      "Maximize your wealth with smart savings strategies and diverse investment opportunities.",
+  },
+  {
+    label: "Tax Consultancy",
+    icon: Icons.Billing,
+    description:
+      "Navigate the complexities of tax regulations with our comprehensive and personalized tax consultancy services.",
+  },
+  {
+    label: "Risk Management",
+    icon: Icons.DangerCircle,
+    description:
+      "Mitigate risks and protect your assets with our robust risk management solutions.",
+  },
+  {
+    label: "Trade & Stock",
+    icon: Icons.UserGroup,
+    description:
+      "Enhance your trading prowess and stock portfolio with cutting-edge tools and expert guidance.",
+  },
+];

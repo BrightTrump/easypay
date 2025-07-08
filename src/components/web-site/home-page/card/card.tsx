@@ -1,48 +1,10 @@
 "use client";
 
+import { CARD_SCHEMA } from "@/constants.ts/data.constants";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
 import { motion } from "framer-motion";
 import React from "react";
-
-const ourServices = [
-  {
-    label: "Business Advising",
-    icon: Icons.User,
-    description:
-      "Empower your business with expert advice and strategic insights to drive growth and success.",
-  },
-  {
-    label: "Finacial Planning",
-    icon: Icons.Bag,
-    description:
-      "Plan your financial future with precision and confidence, tailored to your unique goals and needs.",
-  },
-  {
-    label: "Savings",
-    icon: Icons.Savings,
-    description:
-      "Maximize your wealth with smart savings strategies and diverse investment opportunities.",
-  },
-  {
-    label: "Tax Consultancy",
-    icon: Icons.Billing,
-    description:
-      "Navigate the complexities of tax regulations with our comprehensive and personalized tax consultancy services.",
-  },
-  {
-    label: "Risk Management",
-    icon: Icons.DangerCircle,
-    description:
-      "Mitigate risks and protect your assets with our robust risk management solutions.",
-  },
-  {
-    label: "Trade & Stock",
-    icon: Icons.UserGroup,
-    description:
-      "Enhance your trading prowess and stock portfolio with cutting-edge tools and expert guidance.",
-  },
-];
 
 export default function Card() {
   return (
@@ -63,7 +25,7 @@ export default function Card() {
 
       {/* Our Services Grid */}
       <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl overflow-hidden">
-        {ourServices.map((item, index) => (
+        {CARD_SCHEMA.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
