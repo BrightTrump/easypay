@@ -16,7 +16,7 @@ export default function ContactUs() {
       className="max-w-2xl mx-auto container py-10 sm:py-20 layout-spacing"
     >
       {/* Image as background */}
-      <div className="mx -auto grid grid-cols-2 border place-items-center border-black p-4 rounded-xl">
+      <div className="mx -auto grid grid-flow-col border place-items-center border-black p-4 rounded-xl">
         <div>
           <h3 className="sm:text-2xl">Have any question about us?</h3>
           <p className="text-[#555555]">Don&apos;t hesitate to contact us.</p>

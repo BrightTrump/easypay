@@ -12,6 +12,7 @@ export default function Card() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
+      id="card"
       className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20 h-full bg-[#f9f5f5]"
     >
       {/* Header */}
