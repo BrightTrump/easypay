@@ -1,9 +1,10 @@
 "use client";
 
-import { CARD_SCHEMA } from "@/constants.ts/data.constants";
-import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
 import React from "react";
+import { plans } from "./card.json";
+import { Icon } from "@/ui/icons";
+import { Icons } from "@/ui/icons/types";
 
 export default function Card() {
   return (
@@ -13,8 +14,9 @@ export default function Card() {
       transition={{ duration: 2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
       id="card"
-      className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20 h-full bg-[#f9f5f5]"
+      className="py-10 sm:py-24 layout-spacing grid gap-10 sm:gap-20 h-full"
     >
+      <Icon type={Icons.Check} size={60} color="#252525" />
       {/* Header */}
       <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center">
         <p className="text-[#555555]">Card</p>
@@ -25,22 +27,32 @@ export default function Card() {
 
       {/* Our Services Grid */}
       <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20 overflow-hidden">
-        {CARD_SCHEMA.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 3, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="grid place-items-center gap-5 p-4 bg-white [&>div]:grid [&>div]:gap-4 [&>div]:text-center "
-          >
-            <Icon type={item.icon} size={80} color="#285ab1" />
-            <div>
-              <h2 className="text-2xl font-semibold">{item.label}</h2>
-              <p>{item.description}</p>
+        {Object.entries(plans).map(([planKey, planData]) =>
+          planData.map((plan, index) => (
+            <div
+              key={`${planKey}-${index}`}
+              className="border rounded-xl p-6 shadow-md hover:shadow-lg transition-all"
+            >
+              <h3 className="text-xl font-bold text-blue-600 mb-1">
+                {plan.title}
+              </h3>
+              <p className="text-sm font-semibold text-gray-700 mb-4 uppercase">
+                {plan.subTitle}
+              </p>
+              <ul className="space-y-3">
+                {plan.desc.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <Icon type={item.icon} size={60} color="#252525" />
+                    <span>{item.description}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </motion.div>
-        ))}
+          ))
+        )}
       </div>
     </motion.section>
   );
