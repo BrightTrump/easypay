@@ -46,7 +46,7 @@ export default function Section() {
           <div className="grid gap-4">
             <p className="text-[#285ab1] text-xl">About Us</p>
             <h3 className="font-bold text-2xl lg:text-4xl">
-              Invest In Your Future.
+              Homelands is Trusted by 36,817+ Businesses Worldwide.
             </h3>
           </div>
 
