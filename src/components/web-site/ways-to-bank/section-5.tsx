@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
+import { useCounter } from "@/components/hooks/counter.hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Section3() {
+export default function Section5() {
+  const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
@@ -17,13 +19,13 @@ export default function Section3() {
       >
         {/* Text Content */}
         <div className="grid gap-6 items-start [&_h1]:font-bold [&_h1]:text-4xl [&_h1]:text-center md:[&_h1]:text-left [&_p]:text-[#555555]">
-          <h1 className="pb-5">EasyPay ATM Services</h1>
+          <h1 className="pb-5">Mobile Banking</h1>
           <p>
-            EasyPay&apos;s broad ATM network allows you to access your funds at
-            any time and from any location. Our ATM services are secure and
-            convenient, allowing for quick cash withdrawals, balance inquiries,
-            and other transactions. Experience banking on your own terms with
-            EasyPay ATMs, where convenience meets dependability.
+            Banking on-the-go has never been easier. Manage your finances with
+            ease using Homelands's Mobile Banking on your device. Experience
+            secure transactions, account monitoring, and personalized alerts.
+            Your funds, your way: EasyPay Mobile Banking puts convenience at
+            your fingertips.
           </p>
         </div>
 
@@ -31,7 +33,7 @@ export default function Section3() {
         <div className="relative h-[500px] rounded-xl overflow-hidden">
           {/* Main Image */}
           <Image
-            src="/ways-to-bank.jpg"
+            src="/ways-to-3.jpg"
             alt="About Us"
             fill
             className="object-cover w-full h-full rounded-xl"

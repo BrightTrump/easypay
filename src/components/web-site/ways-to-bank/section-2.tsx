@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import { useCounter } from "@/components/hooks/counter.hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Section2() {
-  const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
@@ -17,29 +15,27 @@ export default function Section2() {
         viewport={{ once: true, amount: 0.2 }}
         className="inset-0 grid gap-10 md:grid-cols-2 items-center px-6 lg:px-20 z-10"
       >
-        {/* Text Content */}
-        <div className="grid gap-6 items-start [&_h1]:font-bold [&_h1]:text-4xl [&_h1]:text-center md:[&_h1]:text-left [&_p]:text-[#555555]">
-          <h1 className="pb-5">Ways To Bank</h1>
-          <p>
-            EasyPay offers a wide range of flexible banking options designed to
-            help you diversify and manage your finances with ease. Whether you
-            prefer mobile banking on the go, secure internet services from the
-            comfort of your home, or a combination of both — EasyPay gives you
-            the freedom to choose what works best for your lifestyle. We
-            prioritize your convenience, giving you control, accessibility, and
-            confidence in every transaction.
-          </p>
-        </div>
-
         {/* Image Section */}
         <div className="relative h-[500px] rounded-xl overflow-hidden">
           {/* Main Image */}
           <Image
-            src="/ways-to-bank.jpg"
+            src="/ways-to-2.jpg"
             alt="About Us"
             fill
             className="object-cover w-full h-full rounded-xl"
           />
+        </div>
+
+        {/* Text Content */}
+        <div className="grid gap-6 items-start [&_h1]:font-bold [&_h1]:text-4xl [&_h1]:text-center md:[&_h1]:text-left [&_p]:text-[#555555]">
+          <h1 className="pb-5">Traditional Banking Services</h1>
+          <p>
+            In terms of financial soundness, EasyPay maintains the spirit of
+            traditional banking. With a dedication to dependability and personal
+            service, we provide a variety of traditional banking services that
+            have stood the test of time. EasyPay offers the enduring values of
+            banking, where history meets trust.
+          </p>
         </div>
       </motion.div>
     </section>

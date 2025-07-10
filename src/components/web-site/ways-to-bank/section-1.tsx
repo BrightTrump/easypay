@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
+import { useCounter } from "@/components/hooks/counter.hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Section3() {
+export default function Section1() {
+  const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
@@ -17,13 +19,15 @@ export default function Section3() {
       >
         {/* Text Content */}
         <div className="grid gap-6 items-start [&_h1]:font-bold [&_h1]:text-4xl [&_h1]:text-center md:[&_h1]:text-left [&_p]:text-[#555555]">
-          <h1 className="pb-5">EasyPay ATM Services</h1>
+          <h1 className="pb-5">Ways To Bank</h1>
           <p>
-            EasyPay&apos;s broad ATM network allows you to access your funds at
-            any time and from any location. Our ATM services are secure and
-            convenient, allowing for quick cash withdrawals, balance inquiries,
-            and other transactions. Experience banking on your own terms with
-            EasyPay ATMs, where convenience meets dependability.
+            EasyPay offers a wide range of flexible banking options designed to
+            help you diversify and manage your finances with ease. Whether you
+            prefer mobile banking on the go, secure internet services from the
+            comfort of your home, or a combination of both — EasyPay gives you
+            the freedom to choose what works best for your lifestyle. We
+            prioritize your convenience, giving you control, accessibility, and
+            confidence in every transaction.
           </p>
         </div>
 
