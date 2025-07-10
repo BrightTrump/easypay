@@ -48,10 +48,6 @@ export type InputBaseProps = {
   defaultValue?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onChange?: (e: any) => void;
-
-  // onChange?: (
-  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => void;
   readonly?: boolean;
 };
 
