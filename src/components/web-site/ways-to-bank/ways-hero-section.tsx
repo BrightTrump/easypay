@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeroSection() {
+export default function WaysHeroSection1() {
   return (
     <section className="relative w-full layout-spacing">
       {/* Image as background */}
