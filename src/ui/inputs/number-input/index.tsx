@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import RequiredField from "../_shared/required-field";
 import { InputBaseProps } from "../types";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
+import RequiredField from "../_shared/required-field";
 
 export function NumberInput({
   label,
@@ -17,8 +17,6 @@ export function NumberInput({
   defaultValue,
 }: InputBaseProps) {
   const [onInValid, setOnInvalid] = useState(false);
-  const [isValid, setIsValid] = useState(true);
-  const [value, setValue] = useState("");
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -26,21 +24,20 @@ export function NumberInput({
 
     const isNotEmptyAndNotNegative =
       inputValue !== "" && parseFloat(inputValue) >= 0;
+
     if (isValidNumberRegex.test(inputValue) || inputValue === "") {
       if (inputValue.startsWith("-")) {
-        setIsValid(false);
         setOnInvalid(true);
       } else {
-        setIsValid(true);
         setOnInvalid(false);
       }
-      setValue(inputValue);
       onChange?.(e);
     } else {
       setOnInvalid(true);
     }
+
     if (!isNotEmptyAndNotNegative) {
-      setOnInvalid(false); // If the input is empty or negative, clear the required error
+      setOnInvalid(false);
     }
   };
 
@@ -55,9 +52,8 @@ export function NumberInput({
       </label>
 
       {description && (
-        <div className="grid grid-cols-[auto_1fr] gap-1 text-[#555555] text-sm ">
+        <div className="grid grid-cols-[auto_1fr] gap-1 text-[#555555] text-sm">
           <Icon type={Icons.Info} size={16} color="#555555" />
-
           <p>{description}</p>
         </div>
       )}
@@ -76,7 +72,6 @@ export function NumberInput({
         />
       </div>
 
-      {/* Required Field Message */}
       {onInValid && (
         <RequiredField label={label ? label : placeholder ? placeholder : ""} />
       )}

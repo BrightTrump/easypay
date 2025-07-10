@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 
 export interface OtpInputProps {
@@ -11,6 +13,7 @@ const OtpInput = ({ length, name, defaultValue, onChange }: OtpInputProps) => {
   const [otp, setOtp] = useState(
     defaultValue ? defaultValue.split("") : Array(length).fill("")
   );
+
   const handleChange = (element: HTMLInputElement, index: number) => {
     const newOtp = [...otp];
     newOtp[index] = element.value;
@@ -19,6 +22,7 @@ const OtpInput = ({ length, name, defaultValue, onChange }: OtpInputProps) => {
       (element.nextSibling as HTMLInputElement).focus();
     }
   };
+
   const handleKeyDown = (
     event: React.KeyboardEvent<HTMLInputElement>,
     index: number
@@ -31,16 +35,24 @@ const OtpInput = ({ length, name, defaultValue, onChange }: OtpInputProps) => {
       }
     }
   };
+
   const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
     const pasteData = event.clipboardData.getData("text");
     const pasteArr = pasteData.trim().split("");
     const newOtp: string[] = [];
+
     otp.forEach((_, index) => {
       const pasteArrElem = pasteArr[index];
-      pasteArrElem != undefined ? newOtp.push(pasteArrElem) : newOtp.push("");
+      if (pasteArrElem !== undefined) {
+        newOtp.push(pasteArrElem);
+      } else {
+        newOtp.push("");
+      }
     });
+
     setOtp(newOtp);
   };
+
   useEffect(() => {
     onChange?.(otp.join(""));
   }, [otp, onChange]);

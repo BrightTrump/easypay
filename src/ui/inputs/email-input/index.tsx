@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { InputBaseProps } from "../types";
+import RequiredField from "../_shared/required-field";
 
 export function EmailInput({
   label,

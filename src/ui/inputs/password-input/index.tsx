@@ -2,9 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { InputBaseProps } from "../types";
-import RequiredField from "../_shared/required-field";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
+import RequiredField from "../_shared/required-field";
 
 export interface PasswordInputProps extends InputBaseProps {
   isCheckPassword?: (e: boolean) => void;
@@ -32,42 +32,49 @@ export function PasswordInput({
   const [onInValid, setOnInvalid] = useState(false);
   const [checks, setChecks] = useState<string[]>([]);
 
-  // Function Triggers when input value changes
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
     onChange?.(e);
     setOnInvalid(false);
 
-    // At least one uppercase check
-    e.target.value.match(/^(?=.*[A-Z]).*$/)
-      ? !checks.includes(passwordChecks[0].slug) &&
-        setChecks((prev) => [...prev, passwordChecks[0].slug])
-      : setChecks((prev) => [
-          ...prev.filter((elem) => elem !== passwordChecks[0].slug),
-        ]);
+    // Check for uppercase
+    if (value.match(/^(?=.*[A-Z]).*$/)) {
+      if (!checks.includes(passwordChecks[0].slug)) {
+        setChecks((prev) => [...prev, passwordChecks[0].slug]);
+      }
+    } else {
+      setChecks((prev) =>
+        prev.filter((elem) => elem !== passwordChecks[0].slug)
+      );
+    }
 
-    // At least one digit
-    e.target.value.match(/^(?=.*\d).+$/)
-      ? !checks.includes(passwordChecks[1].slug) &&
-        setChecks((prev) => [...prev, passwordChecks[1].slug])
-      : setChecks((prev) => [
-          ...prev.filter((elem) => elem !== passwordChecks[1].slug),
-        ]);
+    // Check for digit
+    if (value.match(/^(?=.*\d).+$/)) {
+      if (!checks.includes(passwordChecks[1].slug)) {
+        setChecks((prev) => [...prev, passwordChecks[1].slug]);
+      }
+    } else {
+      setChecks((prev) =>
+        prev.filter((elem) => elem !== passwordChecks[1].slug)
+      );
+    }
 
-    // At least one non alphanumeric chracter
-    e.target.value.match(/^(?=.*[^a-zA-Z0-9]).+$/)
-      ? !checks.includes(passwordChecks[2].slug) &&
-        setChecks((prev) => [...prev, passwordChecks[2].slug])
-      : setChecks((prev) => [
-          ...prev.filter((elem) => elem !== passwordChecks[2].slug),
-        ]);
+    // Check for non-alphanumeric
+    if (value.match(/^(?=.*[^a-zA-Z0-9]).+$/)) {
+      if (!checks.includes(passwordChecks[2].slug)) {
+        setChecks((prev) => [...prev, passwordChecks[2].slug]);
+      }
+    } else {
+      setChecks((prev) =>
+        prev.filter((elem) => elem !== passwordChecks[2].slug)
+      );
+    }
   };
 
-  // Function Triggers when form submits and input is invalid.
   const handleOnInvalid = () => {
     setOnInvalid(true);
   };
 
-  // Function handles password visibility
   const handleToggleShowHash = () => {
     setShowHash(!showHash);
   };
@@ -102,7 +109,6 @@ export function PasswordInput({
         </button>
       </div>
 
-      {/* Password Checks */}
       {isCheckPassword && (
         <div className="grid gap-1">
           {passwordChecks.map((check, index) => (
@@ -133,7 +139,6 @@ export function PasswordInput({
         </div>
       )}
 
-      {/* Required Field Message */}
       {onInValid && (
         <RequiredField label={label ? label : placeholder ? placeholder : ""} />
       )}

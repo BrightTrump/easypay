@@ -3,8 +3,6 @@ import { RequiredFieldProps } from "../types";
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
 
-RequiredField;
-
 export default function RequiredField({ label }: RequiredFieldProps) {
   return (
     <div className="grid grid-flow-col w-max gap-1">
