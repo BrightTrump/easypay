@@ -25,7 +25,12 @@ export function DateInput({
   const [inputValue, setInputValue] = useState<Date | null>(null);
 
   useEffect(() => {
-    setInputValue(defaultValue);
+    if (defaultValue) {
+      const parsedDate = new Date(defaultValue);
+      if (!isNaN(parsedDate.getTime())) {
+        setInputValue(parsedDate);
+      }
+    }
   }, [defaultValue]);
 
   return (
@@ -40,7 +45,7 @@ export function DateInput({
         selected={inputValue}
         onChange={(date) => {
           setInputValue(date);
-          onChange?.(date);
+          onChange?.(date as any); // Optional: improve this with proper typing
         }}
         customInput={
           <div className="outline-none p-2.5 border border-[#DFDFDF] rounded-sm grid grid-cols-[auto_1fr] items-center gap-3">
@@ -51,7 +56,7 @@ export function DateInput({
             )}
             <input
               id={id}
-              type={"text"}
+              type="text"
               placeholder={placeholder}
               className="outline-none w-full bg-transparent text-sm text-[#555555]"
               value={inputValue ? formatDate(inputValue) : ""}
