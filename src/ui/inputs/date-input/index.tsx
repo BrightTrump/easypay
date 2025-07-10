@@ -8,8 +8,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { formatDate } from "@/utils/date.utils";
 
-export interface DateInputProps extends InputBaseProps {
+export interface DateInputProps extends Omit<InputBaseProps, "onChange"> {
   isLoading?: boolean;
+  onChange?: (date: Date | null) => void;
 }
 
 export function DateInput({
@@ -45,7 +46,7 @@ export function DateInput({
         selected={inputValue}
         onChange={(date) => {
           setInputValue(date);
-          onChange?.(date as any); // Optional: improve this with proper typing
+          onChange?.(date);
         }}
         customInput={
           <div className="outline-none p-2.5 border border-[#DFDFDF] rounded-sm grid grid-cols-[auto_1fr] items-center gap-3">
@@ -56,7 +57,7 @@ export function DateInput({
             )}
             <input
               id={id}
-              type="text"
+              type={"text"}
               placeholder={placeholder}
               className="outline-none w-full bg-transparent text-sm text-[#555555]"
               value={inputValue ? formatDate(inputValue) : ""}
