@@ -45,8 +45,10 @@ export type InputBaseProps = {
   name: string;
   className?: string;
   value?: string;
-  defaultValue?: any;
-  onChange?: (e: any) => void;
+  defaultValue?: string;
+  onChange?: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
   readonly?: boolean;
 };
 

@@ -6,6 +6,7 @@ export type ColorInputProps = Pick<
   "required" | "onChange" | "label" | "id" | "name" | "defaultValue"
 > & {
   onInput?: () => void;
+  onChange?: (color: string) => void;
 };
 
 export default function ColorInput({
