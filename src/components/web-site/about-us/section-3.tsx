@@ -1,21 +1,13 @@
 "use client";
 
+import React from "react";
 import { OUR_SERVICES_SCHEMA } from "@/constants.ts/data.constants";
 import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
-import React from "react";
-import BestServices from "./best-services";
 
-export default function OurServices() {
+export default function Section3() {
   return (
-    <motion.section
-      initial={{ opacity: 0, x: -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 2, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
-      id="services"
-      className="py-20 layout-spacing grid gap-10 sm:gap-20 h-full"
-    >
+    <section className="py-20 layout-spacing grid gap-10 sm:gap-20">
       {/* Header */}
       <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center">
         <p className="text-[#555555]">Our Services</p>
@@ -25,7 +17,7 @@ export default function OurServices() {
       </div>
 
       {/* Our Services Grid */}
-      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20 overflow-hidden">
+      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20">
         {OUR_SERVICES_SCHEMA.map((item, index) => (
           <motion.div
             key={index}
@@ -43,8 +35,6 @@ export default function OurServices() {
           </motion.div>
         ))}
       </div>
-
-      <BestServices />
-    </motion.section>
+    </section>
   );
 }
