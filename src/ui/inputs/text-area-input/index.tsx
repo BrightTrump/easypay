@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ChangeEvent, ChangeEventHandler, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { InputBaseProps } from "../types";
 import RequiredField from "../_shared/required-field";
 

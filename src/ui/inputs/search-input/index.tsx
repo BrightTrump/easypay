@@ -17,7 +17,7 @@ export function SearchInput({
   onChange,
   placeholder,
 }: SearchInputProps) {
-  let timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);

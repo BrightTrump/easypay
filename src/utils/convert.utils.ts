@@ -1,6 +1,8 @@
 import { Status } from "@/@types/analytic.type";
 
-export const convertEnumToArray = (enumObject: Object) => {
+export const convertEnumToArray = (
+  enumObject: Record<string, string | number>
+) => {
   return Object.values(enumObject).filter((value) => typeof value === "string");
 };
 
@@ -10,7 +12,7 @@ export const calculatePercentages = (statuses: Status[]): Status[] => {
   const total = statuses.reduce((sum, status) => sum + Number(status.count), 0);
   const basePercentage = 100 / (statuses.length * 2); // Base percentage derived dynamically
   const totalBase = basePercentage * statuses.length;
-  let remainingPercentage = 100 - totalBase;
+  const remainingPercentage = 100 - totalBase;
 
   if (total === 0) {
     // If total is 0, distribute evenly while ensuring minimum percentage
@@ -21,7 +23,7 @@ export const calculatePercentages = (statuses: Status[]): Status[] => {
   }
 
   let allocatedPercentage = 0;
-  let result = statuses.map((status) => {
+  const result = statuses.map((status) => {
     let percentage = basePercentage;
     if (total > 0 && Number(status.count) > 0) {
       percentage += (Number(status.count) / total) * remainingPercentage;

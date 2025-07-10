@@ -18,24 +18,30 @@ export function TimeRangeInput({
   );
 
   const handleOnChangeFrom = (e: string) => {
-    setInputValue(`${e};${inputValue.split(";")[1]}`);
-    onChange?.(`${e};${inputValue.split(";")[1]}`);
+    const to = inputValue.split(";")[1];
+    const updated = `${e};${to}`;
+    setInputValue(updated);
+    onChange?.(updated);
   };
 
   const handleOnChangeTo = (e: string) => {
-    setInputValue(`${inputValue.split(";")[0]};${e}`);
-    onChange?.(`${inputValue.split(";")[0]};${e}`);
+    const from = inputValue.split(";")[0];
+    const updated = `${from};${e}`;
+    setInputValue(updated);
+    onChange?.(updated);
   };
 
   useEffect(() => {
-    defaultValue && setInputValue(defaultValue);
+    if (defaultValue) {
+      setInputValue(defaultValue);
+    }
     onChange?.(defaultValue || "01 : 00 AM;02 : 00 AM");
-  }, [defaultValue]);
+  }, [defaultValue, onChange]);
 
   return (
     <div className="grid gap-2 content-start">
       {label && (
-        <label htmlFor={id} className={`label`}>
+        <label htmlFor={id} className="label">
           {label} {required && "*"}
         </label>
       )}

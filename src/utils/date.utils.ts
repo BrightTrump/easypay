@@ -38,9 +38,8 @@ export const formatDate = (timestamp: Date | string) => {
   const year = date.getFullYear();
   const formattedDay = day < 10 ? "0" + day : day;
   const formattedMonth = month + 1 < 10 ? "0" + (month + 1) : month + 1;
-  const formattedDate = `${formattedDay}/${formattedMonth}/${year}`;
 
-  return formattedDate;
+  return `${formattedDay}/${formattedMonth}/${year}`;
 };
 
 // Format Date with Month Name
@@ -52,17 +51,17 @@ export const formatDateWithMonthName = (timestamp?: Date | string) => {
   const month = date.getMonth();
   const year = date.getFullYear();
   const formattedDay = day < 10 ? "0" + day : day;
-  const formattedDate = `${formattedDay}${
+
+  const suffix =
     Number(String(formattedDay)[2]) === 1
       ? "st"
       : Number(String(formattedDay)[2]) === 2
       ? "nd"
       : Number(String(formattedDay)[2]) === 3
       ? "rd"
-      : "th"
-  } ${monthsSchema[month]},  ${year}`;
+      : "th";
 
-  return formattedDate;
+  return `${formattedDay}${suffix} ${monthsSchema[month]}, ${year}`;
 };
 
 // Get Current Date
@@ -73,9 +72,8 @@ export const currentDate = () => {
   const year = date.getFullYear();
   const formattedDay = day < 10 ? "0" + day : day;
   const formattedMonth = month < 10 ? `0${month}` : month;
-  const formattedDate = `${formattedMonth}-${formattedDay}-${year}`;
 
-  return formattedDate;
+  return `${formattedMonth}-${formattedDay}-${year}`;
 };
 
 // Get Full Month
@@ -83,12 +81,7 @@ export const getFullMonth = (month: string) => {
   return fullMonthsSchema[Number(month) - 1];
 };
 
-// Check if year is a leap year
-function isLeapYear(year: number): boolean {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
-
-// Format Date to Time
+// Convert UTC to Local Time
 export function convertUTCToLocalTime(utcDateStr: Date | string): string {
   const options: Intl.DateTimeFormatOptions = {
     hour: "2-digit",
@@ -97,17 +90,16 @@ export function convertUTCToLocalTime(utcDateStr: Date | string): string {
   };
 
   const utcDate = new Date(utcDateStr);
-
   if (isNaN(utcDate.getTime())) {
     console.log("Invalid UTC date string");
     return "";
   }
 
   const localTime = utcDate.toLocaleTimeString(undefined, options);
-
   return localTime.replace(":", " : ");
 }
 
+// Convert Local Time to UTC
 export function convertLocalTimeToUTC(localTimeStr: Date | string): string {
   const localDate = new Date(localTimeStr);
 
@@ -115,110 +107,74 @@ export function convertLocalTimeToUTC(localTimeStr: Date | string): string {
     throw new Error("Invalid local time string");
   }
 
-  // Get the UTC representation of the local time
   const utcDate = new Date(
     localDate.getTime() + localDate.getTimezoneOffset() * 60000
   );
-
-  return utcDate.toISOString(); // Returns the UTC time in ISO format
+  return utcDate.toISOString();
 }
 
 // Convert to ISO
 export function convertToISO(dateStr: string, timeStr?: string) {
   if (!dateStr) return;
 
-  // Parse the date in DD/MM/YYYY format
   const [day, month, year] = dateStr?.split("/").map(Number);
 
-  // Parse the time in "HH : MM AM/PM" format
-  let hours = Number(timeStr?.split(" ")[0]);
-  let minutes = Number(timeStr?.split(" ")[2]);
-  let period = timeStr?.split(" ")[3];
+  const hours = Number(timeStr?.split(" ")[0]);
+  const minutes = Number(timeStr?.split(" ")[2]);
+  const period = timeStr?.split(" ")[3];
 
-  // Adjust hours for AM/PM
-  if (period === "PM" && Number(hours) !== 12) {
-    hours += 12;
-  } else if (period === "AM" && Number(hours) === 12) {
-    hours = 0;
+  let adjustedHours = hours;
+  if (period === "PM" && hours !== 12) {
+    adjustedHours += 12;
+  } else if (period === "AM" && hours === 12) {
+    adjustedHours = 0;
   }
 
-  // Create a Date object in the local timezone
   const date = timeStr
-    ? new Date(Date.UTC(year, month - 1, day, hours, minutes))
+    ? new Date(Date.UTC(year, month - 1, day, adjustedHours, minutes))
     : new Date(Date.UTC(year, month - 1, day));
 
-  // Convert to ISO 8601 format in UTC
-  return date?.toISOString();
+  return date.toISOString();
 }
 
 // Check if date is expired
 export const isDateExpired = (dateStr: string) => {
-  const currentDate = new Date();
+  const now = new Date();
   const date = new Date(dateStr);
-  const currentYear = currentDate.getFullYear();
-  const dateYear = date.getFullYear();
-  const currentMonth = currentDate.getMonth();
-  const dateMonth = date.getMonth();
-  const currentDay = currentDate.getDate();
-  const dateDay = date.getDate();
-  const currentHour = currentDate.getHours();
-  const dateHour = date.getHours();
-  const currentMins = currentDate.getMinutes();
-  const dateMins = date.getMinutes();
 
   const currentTimeStamp = new Date(
-    currentYear,
-    currentMonth,
-    currentDay,
-    currentHour,
-    currentMins
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+    now.getHours(),
+    now.getMinutes()
   ).getTime();
 
   const dateTimeStamp = new Date(
-    dateYear,
-    dateMonth,
-    dateDay,
-    dateHour,
-    dateMins
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate(),
+    date.getHours(),
+    date.getMinutes()
   ).getTime();
 
   return dateTimeStamp <= currentTimeStamp;
 };
 
-/**
- * Converts a high-precision ISO timestamp to a standard ISO 8601 format with UTC timezone.
- * If the dateString is already in UTC format, it returns the dateString unchanged.
- *
- * @param {string} dateString - The dateString timestamp in the format `YYYY-MM-DDTHH:mm:ss.ssssss` or `YYYY-MM-DDTHH:mm:ss.sssZ`.
- * @returns {string} - The converted timestamp in ISO 8601 format with UTC timezone (`YYYY-MM-DDTHH:mm:ss.sssZ`).
- *
- * @example
- * const original = "2024-12-01T23:44:57.4797843";
- * const converted = convertToISO8601WithUTC(original);
- * console.log(converted); // Outputs: "2024-12-01T23:44:57.479Z"
- *
- * const alreadyUTC = "2024-12-01T23:44:57.479Z";
- * const same = convertToISO8601WithUTC(alreadyUTC);
- * console.log(same); // Outputs: "2024-12-01T23:44:57.479Z"
- */
+// Convert to ISO 8601 with UTC
 export function convertToISO8601WithUTC(dateString?: string) {
   if (!dateString) return "";
 
-  // Check if the dateString is already in UTC format (ends with 'Z')
-  if (dateString?.endsWith("Z")) {
-    return dateString;
-  }
+  if (dateString.endsWith("Z")) return dateString;
 
-  // Convert to a Date object and then to ISO string in UTC format
-  const date = new Date(dateString);
-  return date?.toISOString();
+  return new Date(dateString).toISOString();
 }
 
 // Get Relative Date
 export function getRelativeDate(dateString: string): string {
   const date = new Date(convertToISO8601WithUTC(dateString));
   const now = new Date();
-  const diffInSeconds = Math.floor((now.getTime() - date?.getTime()) / 1000);
+  const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
 
   const timeIntervals: { [key: string]: number } = {
     year: 31536000,
@@ -242,6 +198,7 @@ export function getRelativeDate(dateString: string): string {
   return "just now";
 }
 
+// Short Format
 export const formatDateShort = (date: Date | string): string => {
   if (!date) return "";
   const options: Intl.DateTimeFormatOptions = {

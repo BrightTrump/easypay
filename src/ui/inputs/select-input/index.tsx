@@ -17,7 +17,7 @@ export interface SelectInputProps {
   required?: boolean;
   readonly?: boolean;
   value?: string;
-  defaultValue?: any;
+  defaultValue?: string;
   className?: string;
   onInput?: () => void;
   onChange?: (e: string) => void;
@@ -40,16 +40,17 @@ export function SelectInput({
   );
 
   const handleOnValueChange = (e: string) => {
-    !value && setSelectedOption(e);
+    if (!value) {
+      setSelectedOption(e);
+    }
     onChange?.(e);
     onInput?.();
   };
 
   useEffect(() => {
-    if (value !== undefined && value !== selectedOption) {
+    if (value !== undefined) {
       setSelectedOption(value);
-    }
-    if (defaultValue !== undefined && defaultValue !== selectedOption) {
+    } else if (defaultValue !== undefined) {
       setSelectedOption(defaultValue);
     }
   }, [defaultValue, value]);

@@ -2,8 +2,7 @@
 
 import { Icon } from "@/ui/icons";
 import { Icons } from "@/ui/icons/types";
-import React, { useEffect, useState } from "react";
-import { normalizeEnum } from "../select-input/utils";
+import React, { useState } from "react";
 
 export interface SortInputProps {
   onChange: (e: string) => void;
