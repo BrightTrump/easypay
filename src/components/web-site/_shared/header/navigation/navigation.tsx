@@ -13,6 +13,7 @@ export default function Navigation() {
         <NavigationItem url="/about-us">About Us</NavigationItem>
         <NavigationItem url="#services">Services</NavigationItem>
         <NavigationItem url="#card">Card</NavigationItem>
+        <NavigationItem url="#card">Contact Us</NavigationItem>
       </div>
     </>
   );

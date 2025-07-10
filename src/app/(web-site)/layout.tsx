@@ -1,3 +1,4 @@
+import Footer from "@/components/web-site/_shared/footer";
 import Header from "@/components/web-site/_shared/header";
 
 export default function WebsiteLayout({
@@ -9,6 +10,7 @@ export default function WebsiteLayout({
     <>
       <Header />
       {children}
+      <Footer />
     </>
   );
 }
