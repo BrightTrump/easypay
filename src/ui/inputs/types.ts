@@ -5,17 +5,11 @@ import { SelectInputProps } from "./select-input";
 import { OtpInputProps } from "./otp-input";
 import { PasswordInputProps } from "./password-input";
 import { SortInputProps } from "./sort-input";
-import { SelectContactInputProps } from "./select-contact-input";
-import { SelectTeamInputProps } from "./select-team-input";
-import { SelectMilestoneInputProps } from "./select-milestone-input";
 import { ColorInputProps } from "./color-input";
 import { DateInputProps } from "./date-input";
 import { TextAreaInputProps } from "./text-area-input";
 import { ToggleInputProps } from "./toggle-input/input";
 import { CheckBoxRoundedInputProps } from "./check-box-rounded-input";
-import { SelectGroupInputProps } from "./select-group-input";
-import { SelectStatusInputProps } from "./select-status-input";
-import { SelectLabelInputProps } from "./select-label-input";
 
 export type InputProps<T> = {
   type: T;
@@ -33,20 +27,8 @@ export type InputProps<T> = {
   ? PasswordInputProps
   : T extends Inputs.Search
   ? SearchInputProps
-  : T extends Inputs.SelectContact
-  ? SelectContactInputProps
-  : T extends Inputs.SelectGroup
-  ? SelectGroupInputProps
   : T extends Inputs.Select
   ? SelectInputProps
-  : T extends Inputs.SelectLabel
-  ? SelectLabelInputProps
-  : T extends Inputs.SelectMilestone
-  ? SelectMilestoneInputProps
-  : T extends Inputs.SelectStatus
-  ? SelectStatusInputProps
-  : T extends Inputs.SelectTeam
-  ? SelectTeamInputProps
   : T extends Inputs.Sort
   ? SortInputProps
   : T extends Inputs.TextArea

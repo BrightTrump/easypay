@@ -20,45 +20,22 @@ import { DateInput, DateInputProps } from "./date-input";
 import { TextAreaInput } from "./text-area-input";
 import { SortInput, SortInputProps } from "./sort-input";
 import { TimeInput } from "./time-input";
-import {
-  SelectContactInput,
-  SelectContactInputProps,
-} from "./select-contact-input";
-import { SelectTeamInput, SelectTeamInputProps } from "./select-team-input";
-
-import {
-  SelectMilestoneInput,
-  SelectMilestoneInputProps,
-} from "./select-milestone-input";
-import ColorInput, { ColorInputProps } from "./color-input";
-
 import { ToggleInput, ToggleInputProps } from "./toggle-input/input";
-
-import { SelectGroupInput, SelectGroupInputProps } from "./select-group-input";
 import { TimeRangeInput } from "./time-range-input";
-import {
-  SelectStatusInput,
-  SelectStatusInputProps,
-} from "./select-status-input";
-import { SelectLabelInput, SelectLabelInputProps } from "./select-label-input";
+
+import ColorInput, { ColorInputProps } from "./color-input";
 
 export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
   const { type } = props;
   const inputBaseProps = props as InputBaseProps;
-  const colorInputProps = props as ColorInputProps;
   const checkBoxInputProps = props as CheckBoxInputProps;
   const checkBoxRoundedInputProps = props as CheckBoxRoundedInputProps;
+  const colorInputProps = props as ColorInputProps;
   const dateInputProps = props as DateInputProps;
   const otpInputProps = props as OtpInputProps;
   const passwordInputProps = props as PasswordInputProps;
-  const selectContactInputProps = props as SelectContactInputProps;
-  const selectGroupInputProps = props as SelectGroupInputProps;
   const searchInputProps = props as SearchInputProps;
-  const selectLabelInputProps = props as SelectLabelInputProps;
-  const selectMilestoneInputProps = props as SelectMilestoneInputProps;
   const selectInputProps = props as SelectInputProps;
-  const selectStatusInputProps = props as SelectStatusInputProps;
-  const selectTeamInputProps = props as SelectTeamInputProps;
   const sortInputProps = props as SortInputProps;
   const toggleInputProps = props as ToggleInputProps;
 
@@ -90,26 +67,8 @@ export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
     case Inputs.Search:
       return <SearchInput {...searchInputProps} />;
 
-    case Inputs.SelectContact:
-      return <SelectContactInput {...selectContactInputProps} />;
-
-    case Inputs.SelectGroup:
-      return <SelectGroupInput {...selectGroupInputProps} />;
-
     case Inputs.Select:
       return <SelectInput {...selectInputProps} />;
-
-    case Inputs.SelectLabel:
-      return <SelectLabelInput {...selectLabelInputProps} />;
-
-    case Inputs.SelectMilestone:
-      return <SelectMilestoneInput {...selectMilestoneInputProps} />;
-
-    case Inputs.SelectStatus:
-      return <SelectStatusInput {...selectStatusInputProps} />;
-
-    case Inputs.SelectTeam:
-      return <SelectTeamInput {...selectTeamInputProps} />;
 
     case Inputs.Sort:
       return <SortInput {...sortInputProps} />;
