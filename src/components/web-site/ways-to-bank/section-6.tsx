@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useCounter } from "@/components/hooks/counter.hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
