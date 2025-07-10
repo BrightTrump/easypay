@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import "./index.css";
 import { TextInput } from "./text-input";
 import { InputBaseProps, InputProps, Inputs } from "./types";
@@ -25,77 +25,37 @@ import {
   SelectContactInputProps,
 } from "./select-contact-input";
 import { SelectTeamInput, SelectTeamInputProps } from "./select-team-input";
-import {
-  SelectPriorityInput,
-  SelectPriorityInputProps,
-} from "./select-priority-input";
-import {
-  SelectClientInput,
-  SelectClientInputProps,
-} from "./select-client-input";
-import {
-  SelectProjectMemberInput,
-  SelectProjectMemberInputProps,
-} from "./select-project-member-input";
+
 import {
   SelectMilestoneInput,
   SelectMilestoneInputProps,
 } from "./select-milestone-input";
 import ColorInput, { ColorInputProps } from "./color-input";
-import {
-  SelectMultipleContactsInput,
-  SelectMultipleContactsInputProps,
-} from "./select-multiple-contacts-input";
+
 import { ToggleInput, ToggleInputProps } from "./toggle-input/input";
-import {
-  SelectMultipleClientsInput,
-  SelectMultipleClientsInputProps,
-} from "./select-multiple-clients-input";
-import {
-  SelectMultipleTeamMembersInput,
-  SelectMultipleTeamMembersInputProps,
-} from "./select-multiple-team-members-input";
+
 import { SelectGroupInput, SelectGroupInputProps } from "./select-group-input";
 import { TimeRangeInput } from "./time-range-input";
 import {
   SelectStatusInput,
   SelectStatusInputProps,
 } from "./select-status-input";
-import {
-  SelectProjectStatusInput,
-  SelectProjectStatusInputProps,
-} from "./select-project-status-input";
 import { SelectLabelInput, SelectLabelInputProps } from "./select-label-input";
-import {
-  SelectMultipleTagsInput,
-  SelectMultipleTagsInputProps,
-} from "./select-multiple-tags-input";
 
 export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
   const { type } = props;
   const inputBaseProps = props as InputBaseProps;
+  const colorInputProps = props as ColorInputProps;
   const checkBoxInputProps = props as CheckBoxInputProps;
   const checkBoxRoundedInputProps = props as CheckBoxRoundedInputProps;
-  const colorInputProps = props as ColorInputProps;
   const dateInputProps = props as DateInputProps;
   const otpInputProps = props as OtpInputProps;
   const passwordInputProps = props as PasswordInputProps;
   const selectContactInputProps = props as SelectContactInputProps;
   const selectGroupInputProps = props as SelectGroupInputProps;
-  const selectClientInputProps = props as SelectClientInputProps;
   const searchInputProps = props as SearchInputProps;
   const selectLabelInputProps = props as SelectLabelInputProps;
   const selectMilestoneInputProps = props as SelectMilestoneInputProps;
-  const selectMultipleClientsInputProps =
-    props as SelectMultipleClientsInputProps;
-  const selectMultipleContactsInputProps =
-    props as SelectMultipleContactsInputProps;
-  const selectMultipleTagsInputProps = props as SelectMultipleTagsInputProps;
-  const selectMultipleTeamMembersInputProps =
-    props as SelectMultipleTeamMembersInputProps;
-  const selectPriorityInputProps = props as SelectPriorityInputProps;
-  const selectProjectMemberInputProps = props as SelectProjectMemberInputProps;
-  const selectProjectStatusInputProps = props as SelectProjectStatusInputProps;
   const selectInputProps = props as SelectInputProps;
   const selectStatusInputProps = props as SelectStatusInputProps;
   const selectTeamInputProps = props as SelectTeamInputProps;
@@ -130,9 +90,6 @@ export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
     case Inputs.Search:
       return <SearchInput {...searchInputProps} />;
 
-    case Inputs.SelectClient:
-      return <SelectClientInput {...selectClientInputProps} />;
-
     case Inputs.SelectContact:
       return <SelectContactInput {...selectContactInputProps} />;
 
@@ -147,35 +104,6 @@ export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
 
     case Inputs.SelectMilestone:
       return <SelectMilestoneInput {...selectMilestoneInputProps} />;
-
-    case Inputs.SelectMultipleClients:
-      return (
-        <SelectMultipleClientsInput {...selectMultipleClientsInputProps} />
-      );
-
-    case Inputs.SelectMultipleContacts:
-      return (
-        <SelectMultipleContactsInput {...selectMultipleContactsInputProps} />
-      );
-
-    case Inputs.SelectMultipleTags:
-      return <SelectMultipleTagsInput {...selectMultipleTagsInputProps} />;
-
-    case Inputs.SelectMultipleTeamMembers:
-      return (
-        <SelectMultipleTeamMembersInput
-          {...selectMultipleTeamMembersInputProps}
-        />
-      );
-
-    case Inputs.SelectPriority:
-      return <SelectPriorityInput {...selectPriorityInputProps} />;
-
-    case Inputs.SelectProjectMember:
-      return <SelectProjectMemberInput {...selectProjectMemberInputProps} />;
-
-    case Inputs.SelectProjectStatus:
-      return <SelectProjectStatusInput {...selectProjectStatusInputProps} />;
 
     case Inputs.SelectStatus:
       return <SelectStatusInput {...selectStatusInputProps} />;

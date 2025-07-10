@@ -7,23 +7,15 @@ import { PasswordInputProps } from "./password-input";
 import { SortInputProps } from "./sort-input";
 import { SelectContactInputProps } from "./select-contact-input";
 import { SelectTeamInputProps } from "./select-team-input";
-import { SelectPriorityInputProps } from "./select-priority-input";
-import { SelectClientInputProps } from "./select-client-input";
-import { SelectProjectMemberInputProps } from "./select-project-member-input";
 import { SelectMilestoneInputProps } from "./select-milestone-input";
 import { ColorInputProps } from "./color-input";
 import { DateInputProps } from "./date-input";
 import { TextAreaInputProps } from "./text-area-input";
 import { ToggleInputProps } from "./toggle-input/input";
 import { CheckBoxRoundedInputProps } from "./check-box-rounded-input";
-import { SelectMultipleContactsInputProps } from "./select-multiple-contacts-input";
-import { SelectMultipleClientsInputProps } from "./select-multiple-clients-input";
-import { SelectMultipleTeamMembersInputProps } from "./select-multiple-team-members-input";
 import { SelectGroupInputProps } from "./select-group-input";
-import { SelectProjectStatusInputProps } from "./select-project-status-input";
 import { SelectStatusInputProps } from "./select-status-input";
 import { SelectLabelInputProps } from "./select-label-input";
-import { SelectMultipleTagsInputProps } from "./select-multiple-tags-input";
 
 export type InputProps<T> = {
   type: T;
@@ -41,8 +33,6 @@ export type InputProps<T> = {
   ? PasswordInputProps
   : T extends Inputs.Search
   ? SearchInputProps
-  : T extends Inputs.SelectClient
-  ? SelectClientInputProps
   : T extends Inputs.SelectContact
   ? SelectContactInputProps
   : T extends Inputs.SelectGroup
@@ -53,20 +43,6 @@ export type InputProps<T> = {
   ? SelectLabelInputProps
   : T extends Inputs.SelectMilestone
   ? SelectMilestoneInputProps
-  : T extends Inputs.SelectMultipleClients
-  ? SelectMultipleClientsInputProps
-  : T extends Inputs.SelectMultipleContacts
-  ? SelectMultipleContactsInputProps
-  : T extends Inputs.SelectMultipleTags
-  ? SelectMultipleTagsInputProps
-  : T extends Inputs.SelectMultipleTeamMembers
-  ? SelectMultipleTeamMembersInputProps
-  : T extends Inputs.SelectPriority
-  ? SelectPriorityInputProps
-  : T extends Inputs.SelectProjectMember
-  ? SelectProjectMemberInputProps
-  : T extends Inputs.SelectProjectStatus
-  ? SelectProjectStatusInputProps
   : T extends Inputs.SelectStatus
   ? SelectStatusInputProps
   : T extends Inputs.SelectTeam

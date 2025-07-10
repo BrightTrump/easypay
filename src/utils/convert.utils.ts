@@ -1,4 +1,4 @@
-import Status from "@/@types/analytic.type";
+import { Status } from "@/@types/analytic.type";
 
 export const convertEnumToArray = (enumObject: Object) => {
   return Object.values(enumObject).filter((value) => typeof value === "string");
