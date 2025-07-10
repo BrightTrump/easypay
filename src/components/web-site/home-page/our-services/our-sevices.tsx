@@ -14,7 +14,7 @@ export default function OurServices() {
       transition={{ duration: 2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
       id="services"
-      className="py-20 layout-spacing grid gap-10 sm:gap-20 h-full"
+      className="py-20 layout-spacing grid gap-10 sm:gap-20"
     >
       {/* Header */}
       <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center">
@@ -25,7 +25,7 @@ export default function OurServices() {
       </div>
 
       {/* Our Services Grid */}
-      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20 overflow-hidden">
+      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20">
         {OUR_SERVICES_SCHEMA.map((item, index) => (
           <motion.div
             key={index}
