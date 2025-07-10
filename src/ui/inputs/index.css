@@ -1,0 +1,64 @@
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+}
+
+.label {
+  @apply cursor-pointer text-[#252525] font-medium text-sm;
+}
+
+.base-input {
+  @apply grid bg-transparent;
+}
+
+.base-input.suffix-icon {
+  @apply grid grid-cols-[1fr_auto];
+}
+
+.base-input .suffix-input {
+  @apply pr-10;
+}
+
+.base-input .preffix {
+  @apply col-[-1/1] row-[-1/1] justify-self-start p-3;
+}
+
+.base-input .suffix {
+  @apply col-[-1/1] row-[-1/1] justify-self-end pr-3;
+}
+
+.base-input input,
+.base-input textarea {
+  @apply w-full bg-transparent text-sm font-medium p-2.5 col-[-1/1] row-[-1/1] border rounded-sm text-[#555555] border-[#DFDFDF] placeholder:text-[#8C8C8C] placeholder:text-sm outline-none transition-all;
+}
+
+.otp-input {
+  @apply border border-[#DFDFDF] w-12 h-12 text-xl rounded-md outline-none text-center;
+}
+
+.input-scroll-bar::-webkit-scrollbar {
+  @apply bg-transparent w-1 px-1;
+}
+
+.input-scroll-bar::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 w-1;
+}

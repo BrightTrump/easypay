@@ -30,12 +30,12 @@ export default function Header() {
                 Sign in
               </Button>
             </Link>
-            <Link href={"/login"} className="grid">
+            <Link href={"#"} className="grid">
               <Button
                 variant={ButtonVariants.BlackFilled}
                 className="whitespace-nowrap border border-[#141414] rounded-xl"
               >
-                Sign Out
+                Book a Demo
               </Button>
             </Link>
           </div>

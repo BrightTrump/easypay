@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Input, Inputs } from "@/ui";
 
 export default function Section1() {
   return (
@@ -17,16 +18,30 @@ export default function Section1() {
       >
         {/* Text Content */}
         <div className="grid gap-6 items-start [&_h1]:font-bold [&_h1]:text-4xl [&_h1]:text-center md:[&_h1]:text-left [&_p]:text-[#555555]">
-          <h1 className="pb-5">Ways To Bank</h1>
-          <p>
-            EasyPay offers a wide range of flexible banking options designed to
-            help you diversify and manage your finances with ease. Whether you
-            prefer mobile banking on the go, secure internet services from the
-            comfort of your home, or a combination of both — EasyPay gives you
-            the freedom to choose what works best for your lifestyle. We
-            prioritize your convenience, giving you control, accessibility, and
-            confidence in every transaction.
-          </p>
+          <div>
+            <div className="grid grid-cols-3">
+              <Input
+                type={Inputs.Text}
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
+              <Input
+                type={Inputs.Email}
+                name="email"
+                id="email"
+                placeholder="Your email address"
+                required
+              />
+              <Input
+                type={Inputs.Number}
+                name="phone-number"
+                id="phone-number"
+                placeholder="PhoneNumber"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Image Section */}

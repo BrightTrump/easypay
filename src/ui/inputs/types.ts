@@ -1,0 +1,133 @@
+import React from "react";
+import { CheckBoxInputProps } from "./check-box-input";
+import { SearchInputProps } from "./search-input";
+import { SelectInputProps } from "./select-input";
+import { OtpInputProps } from "./otp-input";
+import { PasswordInputProps } from "./password-input";
+import { SortInputProps } from "./sort-input";
+import { SelectContactInputProps } from "./select-contact-input";
+import { SelectTeamInputProps } from "./select-team-input";
+import { SelectPriorityInputProps } from "./select-priority-input";
+import { SelectClientInputProps } from "./select-client-input";
+import { SelectProjectMemberInputProps } from "./select-project-member-input";
+import { SelectMilestoneInputProps } from "./select-milestone-input";
+import { ColorInputProps } from "./color-input";
+import { DateInputProps } from "./date-input";
+import { TextAreaInputProps } from "./text-area-input";
+import { ToggleInputProps } from "./toggle-input/input";
+import { CheckBoxRoundedInputProps } from "./check-box-rounded-input";
+import { SelectMultipleContactsInputProps } from "./select-multiple-contacts-input";
+import { SelectMultipleClientsInputProps } from "./select-multiple-clients-input";
+import { SelectMultipleTeamMembersInputProps } from "./select-multiple-team-members-input";
+import { SelectGroupInputProps } from "./select-group-input";
+import { SelectProjectStatusInputProps } from "./select-project-status-input";
+import { SelectStatusInputProps } from "./select-status-input";
+import { SelectLabelInputProps } from "./select-label-input";
+import { SelectMultipleTagsInputProps } from "./select-multiple-tags-input";
+
+export type InputProps<T> = {
+  type: T;
+} & (T extends Inputs.CheckBox
+  ? CheckBoxInputProps
+  : T extends Inputs.CheckBoxRounded
+  ? CheckBoxRoundedInputProps
+  : T extends Inputs.Color
+  ? ColorInputProps
+  : T extends Inputs.Date
+  ? DateInputProps
+  : T extends Inputs.Otp
+  ? OtpInputProps
+  : T extends Inputs.Password
+  ? PasswordInputProps
+  : T extends Inputs.Search
+  ? SearchInputProps
+  : T extends Inputs.SelectClient
+  ? SelectClientInputProps
+  : T extends Inputs.SelectContact
+  ? SelectContactInputProps
+  : T extends Inputs.SelectGroup
+  ? SelectGroupInputProps
+  : T extends Inputs.Select
+  ? SelectInputProps
+  : T extends Inputs.SelectLabel
+  ? SelectLabelInputProps
+  : T extends Inputs.SelectMilestone
+  ? SelectMilestoneInputProps
+  : T extends Inputs.SelectMultipleClients
+  ? SelectMultipleClientsInputProps
+  : T extends Inputs.SelectMultipleContacts
+  ? SelectMultipleContactsInputProps
+  : T extends Inputs.SelectMultipleTags
+  ? SelectMultipleTagsInputProps
+  : T extends Inputs.SelectMultipleTeamMembers
+  ? SelectMultipleTeamMembersInputProps
+  : T extends Inputs.SelectPriority
+  ? SelectPriorityInputProps
+  : T extends Inputs.SelectProjectMember
+  ? SelectProjectMemberInputProps
+  : T extends Inputs.SelectProjectStatus
+  ? SelectProjectStatusInputProps
+  : T extends Inputs.SelectStatus
+  ? SelectStatusInputProps
+  : T extends Inputs.SelectTeam
+  ? SelectTeamInputProps
+  : T extends Inputs.Sort
+  ? SortInputProps
+  : T extends Inputs.TextArea
+  ? TextAreaInputProps
+  : T extends Inputs.Toggle
+  ? ToggleInputProps
+  : InputBaseProps);
+
+export type InputBaseProps = {
+  required?: boolean;
+  label?: string;
+  description?: string;
+  id: string;
+  placeholder?: string;
+  name: string;
+  className?: string;
+  value?: string;
+  defaultValue?: any;
+  onChange?: (e: any) => void;
+  readonly?: boolean;
+};
+
+export interface RequiredFieldProps {
+  label: string;
+}
+
+export enum Inputs {
+  CheckBox = "CheckBox",
+  CheckBoxRounded = "CheckBoxRounded",
+  Color = "Color",
+  Date = "Date",
+  Email = "Email",
+  FileUpload = "FileUpload",
+  Password = "Password",
+  Number = "Number",
+  Otp = "Otp",
+  Search = "Search",
+  SelectClient = "SelectClient",
+  SelectContact = "SelectContact",
+  SelectGroup = "SelectGroup",
+  Select = "Select",
+  SelectLabel = "SelectLabel",
+  SelectMilestone = "SelectMilestone",
+  SelectMultipleClients = "SelectMultipleClients",
+  SelectMultipleContacts = "SelectMultipleContacts",
+  SelectMultipleTags = "SelectMultipleTags",
+  SelectMultipleTeamMembers = "SelectMultipleTeamMembers",
+  SelectPriority = "SelectPriority",
+  SelectProjectMember = "SelectProjectMember",
+  SelectProjectStatus = "SelectProjectStatus",
+  SelectStatus = "SelectStatus",
+  SelectTeam = "SelectTeam",
+  Sort = "Sort",
+  Tel = "Tel",
+  TextArea = "TextArea",
+  Text = "Text",
+  Time = "Time",
+  TimeRange = "TimeRange",
+  Toggle = "Toggle",
+}
