@@ -14,7 +14,7 @@ export default function Section4() {
       className="py-20 layout-spacing grid gap-10 sm:gap-20"
     >
       {/* Header */}
-      <div className="mx-auto container">
+      <div className="mx-auto container grid gap-5">
         <div className="mx-auto grid place-items-center gap-4 text-center">
           <p className="text-[#555555]">Why Apply With Us?</p>
           <h3 className="text-lg max-w-lg md:max-w-2xl">

@@ -37,7 +37,7 @@ export default function HeroSection() {
 
       {/* Best Services Grid (resting on image) */}
       <div className="-mt-16 z-10 relative conatainer mx-auto px-6 lg:px-20 pb-8 grid gap-8 bg-[#FFFFFF] border border-[#252525] rounded-xl">
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 [&>div]:grid [&>div]:gap-4 p-8 [&_h1]:font-bold [&_h1]:text-4xl [&_p]:text-[#555555]">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 [&>div]:grid [&>div]:gap-4 p-8 [&_h1]:font-bold [&_h1]:text-4xl [&_h1]:text-center md:[&_h1]:text-left [&_p]:text-[#555555]">
           <div>
             <h1>Who We Are?</h1>
             <p>

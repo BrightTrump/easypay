@@ -1,7 +1,7 @@
 import HeroSection from "@/components/web-site/about-us/hero-section";
 import Section2 from "@/components/web-site/about-us/section-2";
+import Section3 from "@/components/web-site/about-us/section-3";
 import Section4 from "@/components/web-site/about-us/section-4";
-import Section3 from "@/components/web-site/about-us/section-4";
 
 export default function Page() {
   return (

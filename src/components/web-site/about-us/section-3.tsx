@@ -1,39 +1,41 @@
 "use client";
 
 import React from "react";
-import { OUR_SERVICES_SCHEMA } from "@/constants.ts/data.constants";
-import { Icon } from "@/ui/icons";
-import { motion } from "framer-motion";
+import { Icon, Icons } from "@/ui";
+import { useCounter } from "@/components/hooks/counter.hooks";
 
 export default function Section3() {
+  const { count, countRef } = useCounter(150000, 2000);
   return (
-    <section className="py-20 layout-spacing grid gap-10 sm:gap-20">
-      {/* Header */}
-      <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center">
-        <p className="text-[#555555]">Our Services</p>
-        <h3 className="font-bold text-3xl sm:text-3xl md:text-4xl leading-normal">
-          We Offer Best Financial Consultancy Services in Affordable Cost
-        </h3>
-      </div>
-
-      {/* Our Services Grid */}
-      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20">
-        {OUR_SERVICES_SCHEMA.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 3, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="grid place-items-center gap-5 p-4 bg-white [&>div]:grid [&>div]:gap-4 [&>div]:text-center "
-          >
-            <Icon type={item.icon} size={80} color="#285ab1" />
-            <div>
-              <h2 className="text-2xl font-semibold">{item.label}</h2>
-              <p>{item.description}</p>
+    <section className="py-20 layout-spacing grid gap-10 sm:gap-20 bg-[#285ab1]">
+      <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20 [&>div]:grid [&>div]:place-items-center [&>div]:gap-4 p-4 [&>div]:text-center [&_div]:grid [&_div]:gap-4 [&_h1]:text-5xl [&_h1]:font-bold">
+        <div>
+          <Icon type={Icons.UserGroup} size={60} color="#FFFFFF" />
+          <div>
+            <h1>{count}+</h1>
+            <p>Customers Empowered</p>
+          </div>
+        </div>
+        <div className="">
+          <Icon type={Icons.UserGroup} size={60} color="#FFFFFF" />
+          <div>
+            <h1>$5 billion+</h1>
+            <p>Customers Empowered</p>
+          </div>
+        </div>
+        <div className="">
+          <Icon type={Icons.People} size={60} color="#FFFFFF" />
+          <div>
+            <div className="grid grid-cols-5 gap-2">
+              <Icon type={Icons.Status} size={50} color="#252525" />
+              <Icon type={Icons.Status} size={50} color="#252525" />
+              <Icon type={Icons.Status} size={50} color="#252525" />
+              <Icon type={Icons.Status} size={50} color="#252525" />
+              <Icon type={Icons.Status} size={50} color="#252525" />
             </div>
-          </motion.div>
-        ))}
+            <p>Customer Rating</p>
+          </div>
+        </div>
       </div>
     </section>
   );
