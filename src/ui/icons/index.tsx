@@ -155,6 +155,7 @@ import Shrink from "./shrink";
 import Expand from "./expand";
 import CreditCard from "./credit-card";
 import Savings from "./savings";
+import StarRating from "./star-rating";
 
 interface Props extends IconProps {
   type: Icons;
@@ -584,6 +585,9 @@ export function Icon({ type, color, size }: Props) {
 
     case Icons.SidebarCollapse:
       return <SidebarCollapse {...props} />;
+
+    case Icons.StarRating:
+      return <StarRating {...props} />;
 
     case Icons.Status:
       return <Status {...props} />;

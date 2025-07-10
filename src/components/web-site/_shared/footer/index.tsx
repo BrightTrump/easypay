@@ -13,7 +13,7 @@ const SOCIALS_SCHEMA = [
 export default function Footer() {
   return (
     <footer className="overflow-hidden bg-[#141414] layout-spacing text-white">
-      <div className="container mx-auto relative grid gap-10 sm:gap-20 top-10 [@media(min-width:_480px)_and_(max-width:_768px)]:top-16 md:top-20 lg:top-32 xl:top-40">
+      <div className="container mx-auto px-3 sm:px-0 relative grid gap-10 sm:gap-20 top-10 [@media(min-width:_480px)_and_(max-width:_768px)]:top-16 md:top-20 lg:top-32 xl:top-40">
         <div className="grid lg:grid-flow-col lg:justify-between items-start gap-20">
           <div className="grid gap-2 w-full">
             {/* Logo */}
