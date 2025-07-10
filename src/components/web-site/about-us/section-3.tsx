@@ -11,7 +11,7 @@ export default function Section3() {
       <div className="container mx-auto grid md:grid-cols-3 gap-5 rounded-xl px-6 lg:px-20 [&>div]:grid [&>div]:place-items-center [&>div]:gap-4 p-4 [&>div]:text-center [&_div]:grid [&_div]:gap-4 [&_h1]:text-white [&_h1]:text-5xl [&_h1]:font-bold">
         <div>
           <Icon type={Icons.UserGroup} size={60} color="#252525" />
-          <div>
+          <div ref={countRef}>
             <h1>{count}+</h1>
             <p>Customers Empowered</p>
           </div>

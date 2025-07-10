@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import { useCounter } from "@/components/hooks/counter.hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Section5() {
-  const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
@@ -22,7 +20,7 @@ export default function Section5() {
           <h1 className="pb-5">Mobile Banking</h1>
           <p>
             Banking on-the-go has never been easier. Manage your finances with
-            ease using Homelands's Mobile Banking on your device. Experience
+            ease using EasyPay&apos;s Mobile Banking on your device. Experience
             secure transactions, account monitoring, and personalized alerts.
             Your funds, your way: EasyPay Mobile Banking puts convenience at
             your fingertips.
