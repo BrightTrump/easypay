@@ -4,21 +4,21 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function WaysHeroSection() {
+export default function ContactHeroSection() {
   return (
     <section className="relative w-full layout-spacing">
       {/* Image as background */}
       <div className="relative w-full h-[500px] overflow-hidden">
         <Image
-          src="/ways-to-4.jpg"
-          alt="About Us"
+          src="/contact-us.jpg"
+          alt="Contact Us"
           fill
           className="object-cover"
         />
 
         <div className="absolute inset-0 flex gap-1 justify-center items-center text-3xl font-bold">
           {" "}
-          <p className="text-white">Ways to Bank</p>{" "}
+          <p className="text-white">Contact Us</p>{" "}
           <span className="w-[2px] h-9 bg-black" />
           <Link href="/" className="text-[#285ab1]">
             Home{" "}

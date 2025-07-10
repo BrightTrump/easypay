@@ -8,7 +8,10 @@ import BestServices from "./best-services";
 
 export default function OurServices() {
   return (
-    <section className="py-20 layout-spacing grid gap-10 sm:gap-20">
+    <section
+      id="services"
+      className="py-20 layout-spacing grid gap-10 sm:gap-20"
+    >
       {/* Header */}
       <div className="md:max-w-2xl mx-auto grid place-items-center gap-4 text-center">
         <p className="text-[#555555]">Our Services</p>
