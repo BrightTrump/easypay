@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/data.constants";
 
-export default function Section() {
+export default function Section2() {
   const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
