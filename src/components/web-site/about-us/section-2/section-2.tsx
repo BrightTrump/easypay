@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/data.constants";
 
-export default function Section2() {
+export default function Section4() {
   const { count, countRef } = useCounter(25, 5000);
   return (
     <section className="relative w-full py-20 layout-spacing">
@@ -46,18 +46,16 @@ export default function Section2() {
           <div className="grid gap-4">
             <p className="text-[#285ab1] text-xl">About Us</p>
             <h3 className="font-bold text-2xl lg:text-4xl">
-              Homelands is Trusted by 36,817+ Businesses Worldwide.
+              Invest In Your Future.
             </h3>
           </div>
 
           <div className="grid gap-12 [&_span]:rounded-full [&_span]:w-10 [&_span]:h-10 [&_span]:flex [&_span]:items-center [&_span]:justify-center [&_span]:p-4 [&_span]:border [&_span]:border-[#285ab1] ">
             <div>
               <p className="text-[#939191]">
-                Welcome to Homelands, your trusted partner in navigating the
-                complex world of finance. At Financio, we believe that financial
-                empowerment is the key to achieving your personal and business
-                goals. Our mission is to provide innovative financial solutions
-                and expert guidance that drive success and prosperity.
+                We&apos;re here to help you examine investment and retirement
+                options as you work toward your goals, regardless of where you
+                are in the planning process.
               </p>
             </div>
 
