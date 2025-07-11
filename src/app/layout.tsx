@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 // import { Toast } from "@/ui";
+import "@/ui/inputs/index.css";
 import NextTopLoader from "nextjs-toploader";
 
 const lato = Lato({

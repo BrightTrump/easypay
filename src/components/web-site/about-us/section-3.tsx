@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Icon, Icons } from "@/ui";
-import { useCounter } from "@/components/hooks/counter.hooks";
+import { useCounter } from "@/hooks/counter.hooks";
 
 export default function Section3() {
   const { count, countRef } = useCounter(150000, 2000);
