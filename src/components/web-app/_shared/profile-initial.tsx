@@ -1,3 +1,5 @@
+import { lightenColor } from "@/utils/color.util";
+
 export interface ProfileInitialsProps {
   size?: number;
   variants?: "primaryBg" | "whiteBg";
