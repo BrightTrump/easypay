@@ -2,6 +2,7 @@ import { Icon, Icons } from "@/ui";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Logo from "../logo/Logo";
 
 const SOCIALS_SCHEMA = [
   { icon: Icons.Facebook, url: "https://www.facebook.com/easypay/" },
@@ -13,13 +14,11 @@ const SOCIALS_SCHEMA = [
 export default function Footer() {
   return (
     <footer className="overflow-hidden bg-[#141414] layout-spacing text-white">
-      <div className="container mx-auto px-3 sm:px-0 relative grid gap-10 sm:gap-20 top-10 [@media(min-width:_480px)_and_(max-width:_768px)]:top-16 md:top-20 lg:top-32 xl:top-40">
+      <div className="container mx-auto px-3 sm:px-0 relative grid gap-10 sm:gap-20 top-14">
         <div className="grid lg:grid-flow-col lg:justify-between items-start gap-20">
           <div className="grid gap-2 w-full">
             {/* Logo */}
-            <p className="text-3xl font-bold">
-              Easy<span className="text-[#003DA6]">Pay</span>
-            </p>
+            <Logo />
             {/* <Logo variant="white" className="w-36" /> */}
 
             <div className="grid gap-1 max-w-xs">
@@ -80,14 +79,14 @@ export default function Footer() {
         </div>
 
         {/* Watermark */}
-        <span className="relative opacity-10 aspect-[4/1] grid">
+        {/* <span className="relative opacity-10 aspect-[4/1] grid">
           <Image
             src={"/logo-white.svg"}
             fill
             sizes="(max-width:640px) 640px, (max-width:768px) 768px, 1500px"
             alt="EasyPay Logo"
           />
-        </span>
+        </span> */}
       </div>
     </footer>
   );

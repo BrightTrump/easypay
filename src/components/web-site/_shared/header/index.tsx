@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navigation from "./navigation/navigation";
 import { Button } from "@/ui/button";
 import { ButtonVariants } from "@/ui/button/types";
+import Logo from "../logo/Logo";
 export default function Header() {
   // const pathName = usePathname();
 
@@ -11,9 +12,7 @@ export default function Header() {
     <header className="py-5 layout-spacing z-20 sticky bg-white top-0 left-0 w-full">
       <div className="px-6 lg:px-20 grid grid-flow-col justify-between lg:grid-cols-[1fr_auto] items-center gap-8">
         {/* Logo */}
-        <p className="text-3xl font-bold">
-          Easy<span className="text-[#003DA6]">Pay</span>
-        </p>
+        <Logo />
         {/* <LogoImage variant="black" className="w-32 mx-auto" /> */}
 
         <div className="grid grid-flow-col items-center gap-5">

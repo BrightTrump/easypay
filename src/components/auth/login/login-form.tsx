@@ -7,7 +7,7 @@ import React, { FormEvent, useState } from "react";
 export default function LoginForm() {
   const [isFormComplete, setIsFormComplete] = useState(false);
   const [isRememberMe, setIsRememberMe] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   // const { login, isLogining } = useLogin();
   // const { handleSetAuthResponse } = useSetAuth();
 
@@ -104,7 +104,7 @@ export default function LoginForm() {
         type="submit"
         // disabled={!isFormComplete || isLogining || isLoggedIn}
         // isLoading={isLogining}
-        variant={ButtonVariants.BlackFilled}
+        variant={ButtonVariants.PrimaryFilled}
         className="w-ful mt-5"
       >
         Login
