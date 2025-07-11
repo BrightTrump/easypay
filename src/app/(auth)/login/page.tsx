@@ -2,6 +2,7 @@ import LoginForm from "@/components/auth/login/login-form";
 import React from "react";
 import Image from "next/image";
 import Footer from "@/components/web-site/_shared/footer";
+import Logo from "@/components/web-site/_shared/logo/Logo";
 
 export default function Page() {
   return (
@@ -16,9 +17,7 @@ export default function Page() {
         /> */}
           <div className=" grid grid-rows-[auto_1fr_auto] p-10 relative">
             {/* <Logo variant="black" className="w-28" /> */}
-            {/* <p className="text-3xl font-bold">
-              Easy<span className="text-[#003DA6]">Pay</span>
-            </p> */}
+            <Logo />
 
             <div className="grid place-content-center">
               <span className="relative">

@@ -1,5 +1,6 @@
 import RegistrationForm from "@/components/auth/register/registration-form";
 import Footer from "@/components/web-site/_shared/footer";
+import Logo from "@/components/web-site/_shared/logo/Logo";
 import Image from "next/image";
 import React from "react";
 
@@ -38,9 +39,7 @@ export default function Page() {
 
         <div className="w-full max-w-md px-5 md:px-10 mx-auto rounded-xl py-8 grid content-center gap-8">
           {/* <Logo className="w-28 mx-auto md:hidden" /> */}
-          <p className="text-3xl text-center font-bold">
-            Easy<span className="text-[#003DA6]">Pay</span>
-          </p>
+          <Logo />
 
           {/* Form Description */}
           <div className="text-black text-center grid gap-2">
