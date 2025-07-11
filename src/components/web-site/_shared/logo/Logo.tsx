@@ -14,7 +14,7 @@ export default function Logo({ width, height }: LogoProps) {
         className="object-contain cursor-pointer"
       /> */}
 
-      <p className="text-3xl font-bold">
+      <p className="text-3xl text-center font-bold">
         Easy<span className="text-[#003DA6]">Pay</span>
       </p>
     </div>

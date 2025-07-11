@@ -17,11 +17,9 @@ export default function Page() {
           /> */}
           <div className=" grid grid-rows-[auto_1fr_auto] p-10 relative">
             {/* <Logo variant="black" className="w-28" /> */}
-
-            {/* <div className="grid place-content-end relative">
-              <span className="relative"> */}
+            <Logo />
             <div className="grid place-content-end relative">
-              <span className="absolute w-[420px] left-0 -bottom-10">
+              <span className="absolute w-[420px] left-0 -bottom-4">
                 <Image
                   src={"/recovery-code.svg"}
                   width={500}
@@ -39,7 +37,7 @@ export default function Page() {
 
         <div className="w-full max-w-md px-5 md:px-10 mx-auto rounded-xl py-8 grid content-center gap-8">
           {/* <Logo className="w-28 mx-auto md:hidden" /> */}
-          <Logo />
+          {/* <Logo /> */}
 
           {/* Form Description */}
           <div className="text-black text-center grid gap-2">
