@@ -1,8 +1,8 @@
 import React from "react";
-import RegistrationForm from "@/components/auth/register/registration";
 import Footer from "@/components/web-site/_shared/footer";
 import Logo from "@/components/web-site/_shared/logo/Logo";
 import Image from "next/image";
+import RegistrationForm from "./registration-form/registration-form";
 
 export default function Registration() {
   return (
@@ -35,7 +35,7 @@ export default function Registration() {
           </div>
         </div>
 
-        <div className="w-full max-w-md px-5 md:px-10 mx-auto rounded-xl py-8 grid content-center gap-8">
+        <div className="w-full max-w-xl px-5 sm:px-2 mx-auto rounded-xl py-8 grid  gap-8">
           {/* <Logo className="w-28 mx-auto md:hidden" /> */}
 
           {/* Form */}

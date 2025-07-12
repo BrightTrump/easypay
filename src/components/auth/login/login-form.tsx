@@ -113,7 +113,7 @@ export default function LoginForm() {
       <p className="font-medium text-center">
         New to EasyPay?{" "}
         <Link
-          href={"/registration"}
+          href={"/register"}
           className="text-primary font-semibold underline"
         >
           Create Account

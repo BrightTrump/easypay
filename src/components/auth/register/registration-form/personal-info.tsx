@@ -16,7 +16,7 @@ export default function PersonalInfo() {
           </p>
         </div>
       </div>
-      <form className="grid grid-cols-2 gap-2">
+      <form className="grid grid-cols-2 gap-4">
         <Input
           type={Inputs.Text}
           label="First Name"
