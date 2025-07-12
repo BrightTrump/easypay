@@ -2,6 +2,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.layout-spacing {
+  @apply px-5 sm:px-10;
+}
+
+.custom-scroll-bar::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+.custom-scroll-bar::-webkit-scrollbar-track {
+  @apply bg-[#DEDEDE];
+}
+
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  @apply bg-[#B9B9B9] cursor-grabbing;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

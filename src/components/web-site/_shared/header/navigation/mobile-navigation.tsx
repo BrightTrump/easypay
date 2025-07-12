@@ -33,7 +33,7 @@ export default function MobileNavigation() {
 
   return (
     <>
-      <button className="lg:hidden" onClick={handleToggle}>
+      <button className="lg:hidden cursor-pointer" onClick={handleToggle}>
         <Icon type={Icons.Hamburger} size={32} color="#141414" />
       </button>
 
@@ -43,24 +43,24 @@ export default function MobileNavigation() {
             variants={variants}
             initial="initial"
             animate="animate"
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed inset-0 bg-white w-full h-[100svh] grid py-5 overflow-hidden"
           >
-            <div className="grid gap-16 content-start overflow-hidden">
+            <div className="grid gap-8 content-start overflow-hidden">
               {/* Logo and Close button */}
               <div className="px-5">
                 <div className="container mx-auto grid grid-flow-col items-center justify-between">
                   <Logo />
 
-                  <button onClick={handleToggle}>
+                  <button onClick={handleToggle} className="cursor-pointer">
                     <Icon type={Icons.Close} size={32} color="#141414" />
                   </button>
                 </div>
               </div>
 
               {/* Navigations */}
-              <div className="overflow-y-auto custom-scroll-bar px-5">
-                <div className="grid gap-8 container mx-auto">
+              <div className="grid gap-8 overflow-y-scroll custom-scroll-bar">
+                <div className="grid gap-8 px-0 sm:px-10">
                   {/* Navigation  */}
                   <NavigationItem url="/">Home</NavigationItem>
                   <NavigationItem url="/about-us">About Us</NavigationItem>
@@ -71,26 +71,25 @@ export default function MobileNavigation() {
                     Ways to Bank
                   </NavigationItem>
                 </div>
-              </div>
-
-              {/* Call to Actions */}
-              <div className="grid grid-cols-2 gap-3 [&_Button]:cursor-pointer">
-                <Link href={"/login"} className="grid">
-                  <Button
-                    variant={ButtonVariants.BlackOutlined}
-                    className="whitespace-nowrap border border-[#141414] rounded-xl"
-                  >
-                    Sign in
-                  </Button>
-                </Link>
-                <Link href={"#"} className="grid">
-                  <Button
-                    variant={ButtonVariants.BlackFilled}
-                    className="whitespace-nowrap border border-[#141414] rounded-xl"
-                  >
-                    Book a Demo
-                  </Button>
-                </Link>
+                {/* Call to Actions */}
+                <div className="grid grid-cols-2 gap-3 [&_Button]:cursor-pointer px-5 sm:px-8">
+                  <Link href={"/login"} className="grid">
+                    <Button
+                      variant={ButtonVariants.BlackOutlined}
+                      className="whitespace-nowrap border border-[#141414] rounded-xl"
+                    >
+                      Sign in
+                    </Button>
+                  </Link>
+                  <Link href={"#"} className="grid">
+                    <Button
+                      variant={ButtonVariants.BlackFilled}
+                      className="whitespace-nowrap border border-[#141414] rounded-xl"
+                    >
+                      Book a Demo
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>
