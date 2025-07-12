@@ -2,6 +2,7 @@
 import React from "react";
 import Navigation from "./navigation/navigation";
 import Logo from "../logo/Logo";
+import MobileNavigation from "./navigation/mobile-navigation";
 export default function Header() {
   // const pathName = usePathname();
 
@@ -10,10 +11,12 @@ export default function Header() {
       <div>
         <Logo />
       </div>
-      <div className="">
-        {/* Logo */}
+      <div className="block md:hidden">
+        <MobileNavigation />
+      </div>
+
+      <div className="hidden sm:block">
         <Navigation />
-        {/* <LogoImage variant="black" className="w-32 mx-auto" /> */}
       </div>
     </header>
   );
