@@ -3,7 +3,8 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import "@/ui/inputs/index.css";
 import NextTopLoader from "nextjs-toploader";
-import { ToastContextProvider } from "@/ui/toast/toast-context-provider";
+// import { ToastContextProvider } from "@/ui/toast/toast-context-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -35,7 +36,8 @@ export default function RootLayout({
           height={4}
           speed={3000}
         />
-        <ToastContextProvider>{children}</ToastContextProvider>
+        {children}
+        <Toaster richColors />
       </body>
     </html>
   );
