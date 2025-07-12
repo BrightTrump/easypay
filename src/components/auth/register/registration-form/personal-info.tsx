@@ -4,17 +4,19 @@ import { Icon, Icons, Input, Inputs } from "@/ui";
 
 export default function PersonalInfo() {
   return (
-    <div className="grid place-items-center">
-      <div className="grid place-items-center w-16 h-16 rounded-full p-4 bg-[#285ab1]">
-        <Icon type={Icons.User} size={32} color="#FFFFFF" />
+    <div className="grid gap-8">
+      <div className="grid gap-4 place-items-center">
+        <div className="grid place-items-center w-16 h-16 rounded-full p-4 bg-[#285ab1]">
+          <Icon type={Icons.User} size={32} color="#FFFFFF" />
+        </div>
+        <div className="text-center ">
+          <h2 className="font-bold text-3xl">Personal Information</h2>
+          <p>
+            Please provide your legal name as it appears on official documents
+          </p>
+        </div>
       </div>
-      <div>
-        <h2>Personal Information</h2>
-        <p>
-          Please provide your legal name as it appears on official documents
-        </p>
-      </div>
-      <form className="grid gap-cols-2 gap-5">
+      <form className="grid grid-cols-2 gap-2">
         <Input
           type={Inputs.Text}
           label="First Name"
@@ -27,6 +29,7 @@ export default function PersonalInfo() {
           label="Middle Name"
           id="middle-name"
           name="middle-name"
+          placeholder="Optional"
           required
         />
         <Input
@@ -43,15 +46,6 @@ export default function PersonalInfo() {
           name="email"
           required
         />
-        <div>
-          <Input
-            type={Inputs.Password}
-            label="Password"
-            id="password"
-            name="password"
-            required
-          />
-        </div>
 
         {/* <p className="text-sm font-medium">
           By clicking on continue you agree to the{" "}

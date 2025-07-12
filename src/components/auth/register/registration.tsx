@@ -1,9 +1,8 @@
+import React from "react";
 import RegistrationForm from "@/components/auth/register/registration";
 import Footer from "@/components/web-site/_shared/footer";
 import Logo from "@/components/web-site/_shared/logo/Logo";
 import Image from "next/image";
-import React from "react";
-import PersonalInfo from "./personal-info";
 
 export default function Registration() {
   return (
@@ -40,7 +39,7 @@ export default function Registration() {
           {/* <Logo className="w-28 mx-auto md:hidden" /> */}
 
           {/* Form */}
-          <PersonalInfo />
+          <RegistrationForm />
         </div>
       </div>
       <Footer />
