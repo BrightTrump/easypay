@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-// import { Toast } from "@/ui";
 import "@/ui/inputs/index.css";
 import NextTopLoader from "nextjs-toploader";
+import { ToastContextProvider } from "@/ui/toast/toast-context-provider";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -35,7 +35,7 @@ export default function RootLayout({
           height={4}
           speed={3000}
         />
-        {children}
+        <ToastContextProvider>{children}</ToastContextProvider>
       </body>
     </html>
   );
