@@ -17,20 +17,21 @@ export default function PersonalInfo() {
             </p>
           </div>
         </div>
-        <form className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           <Input
             type={Inputs.Text}
             label="First Name"
             id="first-name"
             name="first-name"
+            placeholder="John"
             required
           />
           <Input
             type={Inputs.Text}
-            label="Middle Name"
+            label="Middle Name (Optional)"
             id="middle-name"
             name="middle-name"
-            placeholder="Optional"
+            placeholder="Vincent"
             required
           />
           <Input
@@ -38,6 +39,7 @@ export default function PersonalInfo() {
             label="Last Name"
             id="last-name"
             name="last-name"
+            placeholder="Doe"
             required
           />
           <Input
@@ -45,16 +47,10 @@ export default function PersonalInfo() {
             label="Username"
             id="username"
             name="username"
+            placeholder="Johndoe1234"
             required
           />
-          {/* <Input
-            type={Inputs.Email}
-            label="Email Address"
-            id="email"
-            name="email"
-            required
-          /> */}
-        </form>
+        </div>
         <hr />
       </div>
     </>

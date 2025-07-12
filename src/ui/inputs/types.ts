@@ -1,14 +1,15 @@
 import { CheckBoxInputProps } from "./check-box-input";
+import { ColorInputProps } from "./color-input";
 import { SearchInputProps } from "./search-input";
-import { SelectInputProps } from "./select-input";
 import { OtpInputProps } from "./otp-input";
 import { PasswordInputProps } from "./password-input";
 import { SortInputProps } from "./sort-input";
-import { ColorInputProps } from "./color-input";
 import { DateInputProps } from "./date-input";
 import { TextAreaInputProps } from "./text-area-input";
 import { ToggleInputProps } from "./toggle-input/input";
 import { CheckBoxRoundedInputProps } from "./check-box-rounded-input";
+import { SelectCountryInputProps } from "./select-country-input";
+import { SelectInputProps } from "./select-input";
 
 export type InputProps<T> = {
   type: T;
@@ -26,6 +27,8 @@ export type InputProps<T> = {
   ? PasswordInputProps
   : T extends Inputs.Search
   ? SearchInputProps
+  : T extends Inputs.SelectCountry
+  ? SelectCountryInputProps
   : T extends Inputs.Select
   ? SelectInputProps
   : T extends Inputs.Sort
@@ -66,21 +69,8 @@ export enum Inputs {
   Number = "Number",
   Otp = "Otp",
   Search = "Search",
-  SelectClient = "SelectClient",
-  SelectContact = "SelectContact",
-  SelectGroup = "SelectGroup",
+  SelectCountry = "SelectCountry",
   Select = "Select",
-  SelectLabel = "SelectLabel",
-  SelectMilestone = "SelectMilestone",
-  SelectMultipleClients = "SelectMultipleClients",
-  SelectMultipleContacts = "SelectMultipleContacts",
-  SelectMultipleTags = "SelectMultipleTags",
-  SelectMultipleTeamMembers = "SelectMultipleTeamMembers",
-  SelectPriority = "SelectPriority",
-  SelectProjectMember = "SelectProjectMember",
-  SelectProjectStatus = "SelectProjectStatus",
-  SelectStatus = "SelectStatus",
-  SelectTeam = "SelectTeam",
   Sort = "Sort",
   Tel = "Tel",
   TextArea = "TextArea",

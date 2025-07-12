@@ -1,21 +1,46 @@
 "use client";
+
 import React, { useState } from "react";
 import PersonalInfo from "./personal-info";
-import RegistrationCta from "./registration-cta";
+import ContactInfo from "./contact-info";
+import AccountSetup from "./account-setup";
+import Security from "./security";
 import RegistrationSteps from "./registration-steps";
+import RegistrationCta from "./registration-cta";
 
 export default function RegistrationForm() {
   const [step, setStep] = useState(1);
 
+  const renderStepComponent = () => {
+    switch (step) {
+      case 1:
+        return <PersonalInfo />;
+      case 2:
+        return <ContactInfo />;
+      case 3:
+        return <AccountSetup />;
+      case 4:
+        return <Security />;
+      default:
+        return <PersonalInfo />;
+    }
+  };
+
+  const handleSubmit = () => {
+    if (step > 4) {
+      // Final submission logic
+      alert("Form submitted!");
+    }
+  };
+
   return (
-    <div className="grid gap-5 h-full">
-      <div>
-        <RegistrationSteps step={step} />
-      </div>
-      <div>
-        <PersonalInfo />
+    <form onSubmit={handleSubmit} className="grid gap-6 max-w-xl mx-auto">
+      <RegistrationSteps step={step} />
+
+      <div className="bg-white p-5 rounded-xl shadow-md grid gap-5">
+        {renderStepComponent()}
         <RegistrationCta step={step} setStep={setStep} />
       </div>
-    </div>
+    </form>
   );
 }

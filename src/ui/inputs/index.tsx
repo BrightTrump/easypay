@@ -12,7 +12,6 @@ import {
 import { EmailInput } from "./email-input";
 import { PasswordInput, PasswordInputProps } from "./password-input";
 import { SearchInput, SearchInputProps } from "./search-input";
-import { SelectInput, SelectInputProps } from "./select-input";
 import { NumberInput } from "./number-input";
 import OtpInput, { OtpInputProps } from "./otp-input";
 import { TelInput } from "./tel-input";
@@ -24,6 +23,10 @@ import { ToggleInput, ToggleInputProps } from "./toggle-input/input";
 import { TimeRangeInput } from "./time-range-input";
 
 import ColorInput, { ColorInputProps } from "./color-input";
+import SelectCountryInput, {
+  SelectCountryInputProps,
+} from "./select-country-input";
+import { SelectInput, SelectInputProps } from "./select-input";
 
 export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
   const { type } = props;
@@ -36,6 +39,7 @@ export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
   const passwordInputProps = props as PasswordInputProps;
   const searchInputProps = props as SearchInputProps;
   const selectInputProps = props as SelectInputProps;
+  const selectCountryInputProps = props as SelectCountryInputProps;
   const sortInputProps = props as SortInputProps;
   const toggleInputProps = props as ToggleInputProps;
 
@@ -66,6 +70,9 @@ export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
 
     case Inputs.Search:
       return <SearchInput {...searchInputProps} />;
+
+    case Inputs.SelectCountry:
+      return <SelectCountryInput {...selectCountryInputProps} />;
 
     case Inputs.Select:
       return <SelectInput {...selectInputProps} />;
