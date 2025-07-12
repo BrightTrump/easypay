@@ -26,7 +26,7 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <Link href="/sign-up" target="_blank">
+          <Link href="/register" target="_blank">
             <Button
               variant={ButtonVariants.BlackFilled}
               className="w-max cursor-pointer mx-auto sm:mx-0"

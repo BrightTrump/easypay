@@ -1,70 +1,41 @@
-import { Icon, Icons } from "@/ui";
-import { AnimatePresence, motion, Variants } from "framer-motion";
-import { useState } from "react";
-import Logo from "../../logo/Logo";
+"use client";
+
+import React from "react";
 import NavigationItem from "./navigation-item";
+import Link from "next/link";
+import { Button, ButtonVariants } from "@/ui";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const variants: Variants = {
-    initial: () => ({
-      height: 0,
-      opacity: 0,
-    }),
-    animate: {
-      height: "100%",
-      opacity: 1,
-    },
-  };
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <>
-      <button type="button">
-        <Icon type={Icons.Hamburger} size={32} color="#141414" />
-      </button>
-      {isOpen && (
-        <AnimatePresence>
-          <motion.div
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 bg-white w-full h-[100svh] grid py-5 overflow-hidden"
+    <div className="md:grid md:grid-flow-col md:gap-5 md:items-center">
+      <div className="sm:relative sm:top-10 md:grid md:grid-flow-col md:gap-5 md:w-max md:items-center md:hover:text-[#285ab1]">
+        <NavigationItem url="/">Home</NavigationItem>
+        <NavigationItem url="/about-us">About Us</NavigationItem>
+        <NavigationItem url="#services">Services</NavigationItem>
+        <NavigationItem url="#card">Card</NavigationItem>
+        <NavigationItem url="contact-us">Contact Us</NavigationItem>
+        <NavigationItem url="/ways-to-bank">Ways to Bank</NavigationItem>
+      </div>
+
+      {/* Call to Actions */}
+      <div className=" md:grid md:grid-cols-2 md:gap-3 [&_Button]:cursor-pointer sm:reltive sm:right-12">
+        <Link href={"/login"} className="grid">
+          <Button
+            variant={ButtonVariants.BlackOutlined}
+            className="sm:hidden lg:block whitespace-nowrap border border-[#141414] rounded-xl"
           >
-            <div className="grid gap-16 content-start overflow-hidden">
-              {/* Logo and Close button */}
-              <div className="px-5">
-                <div className="container mx-auto grid grid-flow-col items-center justify-between">
-                  <Logo />
-
-                  <button onClick={handleToggle}>
-                    <Icon type={Icons.Close} size={32} color="#141414" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Navigations */}
-              <div className="overflow-y-auto custom-scroll-bar px-5">
-                <div className="hidden lg:grid grid-flow-col gap-5 w-max items-center hover:text-[#285ab1]">
-                  <NavigationItem url="/">Home</NavigationItem>
-                  <NavigationItem url="/about-us">About Us</NavigationItem>
-                  <NavigationItem url="#services">Services</NavigationItem>
-                  <NavigationItem url="#card">Card</NavigationItem>
-                  <NavigationItem url="contact-us">Contact Us</NavigationItem>
-                  <NavigationItem url="/ways-to-bank">
-                    Ways to Bank
-                  </NavigationItem>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      )}
-    </>
+            Sign in
+          </Button>
+        </Link>
+        <Link href={"#"} className="grid">
+          <Button
+            variant={ButtonVariants.BlackFilled}
+            className="whitespace-nowrap border border-[#141414] rounded-xl"
+          >
+            Book a Demo
+          </Button>
+        </Link>
+      </div>
+    </div>
   );
 }
