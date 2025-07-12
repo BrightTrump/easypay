@@ -41,12 +41,19 @@ export default function PersonalInfo() {
             required
           />
           <Input
+            type={Inputs.Text}
+            label="Username"
+            id="username"
+            name="username"
+            required
+          />
+          {/* <Input
             type={Inputs.Email}
             label="Email Address"
             id="email"
             name="email"
             required
-          />
+          /> */}
         </form>
         <hr />
       </div>

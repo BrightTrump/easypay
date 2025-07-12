@@ -1,15 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Progress } from "@/components/ui/progress";
 
-export default function RegistrationSteps() {
-  const [step, setStep] = useState(1);
-
+interface RegistrationStepsProps {
+  step: number;
+}
+export default function RegistrationSteps({ step }: RegistrationStepsProps) {
   const progressiveValue = (step / 4) * 100;
 
-  const goToNextStep = () => {
-    if (step <= 4) setStep((prev) => prev + 1);
-  };
   return (
     <>
       <div className="w-full grid gap-2 bg-[#555555] p-3 rounded-xl shadow-sm">
@@ -21,10 +19,34 @@ export default function RegistrationSteps() {
             step >= 1 ? "[&>p]:text-[#285ab1]" : ""
           }`}
         >
-          <p>Personal Info</p>
-          <p>Contact Details</p>
-          <p>Account Setup</p>
-          <p>Security</p>
+          <p
+            className={`grid grid-flow-col justify-between [&>p]:text-white ${
+              step >= 1 ? "[&>p]:text-[#285ab1]" : ""
+            }`}
+          >
+            Personal Info
+          </p>
+          <p
+            className={`grid grid-flow-col justify-between [&>p]:text-white ${
+              step >= 2 ? "[&>p]:text-[#285ab1]" : ""
+            }`}
+          >
+            Contact Details
+          </p>
+          <p
+            className={`grid grid-flow-col justify-between [&>p]:text-white ${
+              step >= 3 ? "[&>p]:text-[#285ab1]" : ""
+            }`}
+          >
+            Account Setup
+          </p>
+          <p
+            className={`grid grid-flow-col justify-between [&>p]:text-white ${
+              step >= 4 ? "[&>p]:text-[#285ab1]" : ""
+            }`}
+          >
+            Security
+          </p>
         </div>
       </div>
       <hr />

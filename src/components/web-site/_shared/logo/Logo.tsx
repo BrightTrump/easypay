@@ -1,9 +1,10 @@
 import React from "react";
-interface LogoProps {
-  width?: number;
-  height?: number;
-}
-export default function Logo({ width, height }: LogoProps) {
+
+// interface LogoProps {
+//   width?: number;
+//   height?: number;
+// }
+export default function Logo() {
   return (
     <div>
       {/* <Image

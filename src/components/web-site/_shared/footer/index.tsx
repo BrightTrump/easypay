@@ -1,5 +1,4 @@
 import { Icon, Icons } from "@/ui";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "../logo/Logo";
