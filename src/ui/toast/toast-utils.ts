@@ -3,7 +3,7 @@ import { ToastProps } from "./@types";
 
 import { ToastContext } from "./toast-context-provider";
 
-interface CallToastProps extends ToastProps {}
+type CallToastProps = ToastProps;
 export function useToast() {
   const { setToasts } = useContext(ToastContext);
 

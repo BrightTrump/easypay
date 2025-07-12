@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { ToastProps } from "./@types";
 import { Icon, Icons } from "../../ui";
 
-interface ToastItemProps extends ToastProps {}
+type ToastItemProps = ToastProps;
+
 export default function ToastItem({ message, title, type }: ToastItemProps) {
   const [showToast, setShowToast] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
