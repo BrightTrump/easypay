@@ -14,7 +14,7 @@ export default function Neutral({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 bg-[#E9E9E9] border border-[#E9E9E9] rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 bg-[#E9E9E9] border cursor-pointer border-[#E9E9E9] rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

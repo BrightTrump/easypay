@@ -14,7 +14,7 @@ export default function DangerOutlined({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 bg-[#FFEEEE] text-[#F04438] rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 bg-[#FFEEEE] text-[#F04438] cursor-pointer rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

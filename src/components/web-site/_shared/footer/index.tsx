@@ -16,12 +16,12 @@ export default function Footer() {
     <footer className="overflow-hidden bg-[#141414] layout-spacing text-white">
       <div className="container mx-auto px-3 sm:px-0 relative grid gap-10 sm:gap-20 top-14">
         <div className="grid lg:grid-flow-col lg:justify-between items-start gap-20">
-          <div className="grid gap-2 w-full">
+          <div className="grid gap-5 w-full">
             {/* Logo */}
             <Logo />
             {/* <Logo variant="white" className="w-36" /> */}
 
-            <div className="grid gap-1 max-w-xs">
+            <div className="grid gap-4 max-w-xs">
               <h3 className="text-2xl">Have questions? We have answers.</h3>
               <p className="font-medium opacity-70">
                 Send us an email via{" "}

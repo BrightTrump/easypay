@@ -14,7 +14,7 @@ export default function BlackFilled({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 rounded-xl bg-black border border-black text-white items-center justify-center font-medium text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 rounded-xl bg-black border cursor-pointer border-black text-white items-center justify-center font-medium text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

@@ -14,7 +14,7 @@ export default function BlackOutlined({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 rounded-xl bg-white border border-black text-black items-center justify-center font-medium text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 rounded-xl bg-white cursor-pointer border border-black text-black items-center justify-center font-medium text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

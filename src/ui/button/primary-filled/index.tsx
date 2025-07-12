@@ -14,7 +14,7 @@ export default function PrimaryFilled({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 bg-[#003DA6] border border-[#003DA6] text-white rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 bg-[#003DA6] cursor-pointer border border-[#003DA6] text-white rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >

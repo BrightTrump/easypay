@@ -14,7 +14,7 @@ export default function DangerFilled({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`grid grid-flow-col gap-2 bg-[#F04438] border border-[#F04438] text-white rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
+      className={`grid grid-flow-col gap-2 bg-[#F04438] border cursor-pointer border-[#F04438] text-white rounded-xl items-center justify-center font-semibold text-sm px-5 py-2 ${
         disabled && "opacity-60"
       } ${className}`}
     >
