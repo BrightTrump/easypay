@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Footer from "@/components/web-site/_shared/footer";
 import Logo from "@/components/web-site/_shared/logo/Logo";

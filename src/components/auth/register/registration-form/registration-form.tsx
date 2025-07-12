@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import PersonalInfo from "./personal-info";
 import RegistrationCta from "./registration-cta";
