@@ -2,28 +2,12 @@
 
 import { Button, ButtonVariants, Icon, Icons, Input, Inputs } from "@/ui";
 import Link from "next/link";
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 
 export default function LoginForm() {
-  const [isFormComplete, setIsFormComplete] = useState(false);
   const [isRememberMe, setIsRememberMe] = useState(false);
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const { login, isLogining } = useLogin();
-  // const { handleSetAuthResponse } = useSetAuth();
-
   const handleToggleIsRemeberMe = () => {
     setIsRememberMe(!isRememberMe);
-  };
-
-  const handleFormInputChange = (e: FormEvent<HTMLFormElement>) => {
-    const formData = new FormData(e.currentTarget);
-
-    // Get Input Values
-    const email = Boolean(formData.get("email"));
-    const password = Boolean(formData.get("password"));
-
-    // Validate Input Fields
-    setIsFormComplete(email && password);
   };
 
   // Function Triggers on Form onSubmit Event
@@ -57,11 +41,7 @@ export default function LoginForm() {
   // };
 
   return (
-    <form
-      // onSubmit={handleFormSubmission}
-      onInput={handleFormInputChange}
-      className="grid gap-5"
-    >
+    <form className="grid gap-5">
       <Input
         type={Inputs.Email}
         label="Email Address"
