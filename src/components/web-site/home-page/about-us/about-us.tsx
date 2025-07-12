@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useCounter } from "@/hooks/counter.hooks";
-import { Icon } from "@/ui/icons";
+import { Icon } from "@/ui";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/data.constants";

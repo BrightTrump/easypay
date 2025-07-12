@@ -4,3 +4,5 @@ export interface ToastProps {
   name?: string;
   message?: string;
 }
+
+export type ToastTypes = "success" | "error" | "info";
