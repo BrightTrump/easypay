@@ -1,11 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { ACCOUNT_TYPE_SCHEMA } from "@/constants.ts/account-type.constant";
 import { Icon, Icons, Input, Inputs } from "@/ui";
-import { useState } from "react";
 
 export default function AccountSetup() {
-  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [selectedType, setSelectedType] = useState<string>("");
 
   return (
     <div className="grid gap-8">
@@ -28,17 +28,17 @@ export default function AccountSetup() {
           name="account-type"
           required
           placeholder="Select an account type"
-          value={selectedType ?? ""} // 👈 Bind the selected value to the input
-          onChange={(val) => setSelectedType(val)} // 👈 Update state on change
-          customOptions={
+          value={selectedType}
+          onChange={(val) => setSelectedType(val)}
+          customOptions={(setValue, selected) => (
             <div className="grid gap-2 items-center">
               {ACCOUNT_TYPE_SCHEMA.map((item, index) => (
                 <div
                   key={index}
-                  className={`cursor-pointer flex items-center justify-between gap-3 p-4 rounded-xl border border-[#285ab1] shadow-sm bg-[#E9E9E9]
-            ${selectedType === item.title ? "bg-[#D6E5FF]" : ""}
-          `}
-                  onClick={() => setSelectedType(item.title)} // 👈 When clicked, update the state
+                  onClick={() => setValue(item.title)}
+                  className={`cursor-pointer flex items-center justify-between gap-3 p-4 rounded-xl border border-[#285ab1] shadow-sm ${
+                    selected === item.title ? "bg-[#D6E5FF]" : "bg-[#E9E9E9]"
+                  }`}
                 >
                   <div className="flex items-center gap-4">
                     <span className="grid place-items-center bg-white rounded-full w-10 h-10">
@@ -49,13 +49,14 @@ export default function AccountSetup() {
                       <p className="text-sm text-[#555]">{item.description}</p>
                     </div>
                   </div>
-                  {selectedType === item.title && (
+
+                  {selected === item.title && (
                     <Icon type={Icons.Check} size={20} color="#285ab1" />
                   )}
                 </div>
               ))}
             </div>
-          }
+          )}
         />
 
         <Input
@@ -73,7 +74,7 @@ export default function AccountSetup() {
           name="country"
           required
           defaultValue="Nigeria"
-          onChange={(val) => console.log("Selected:", val)}
+          onChange={(val) => console.log("Selected country:", val)}
         />
       </div>
 
