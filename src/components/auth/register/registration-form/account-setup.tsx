@@ -33,14 +33,14 @@ export default function AccountSetup() {
           value={selectedType ?? ""}
           onChange={(val) => setSelectedType(val)}
           customOptions={(setValue, selected) => (
-            <div className="grid gap-4">
+            <div className="grid gap-4 overflow-hidden w-full">
               {ACCOUNT_TYPE_SCHEMA.map((item, index) => (
                 <div
                   key={index}
                   onClick={() => {
                     setValue(item.title);
                   }}
-                  className={`grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4 rounded-xl border shadow-sm cursor-pointer transition-all ${
+                  className={`overflow-x-scroll custom-scroll-bar grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4 rounded-xl border shadow-sm cursor-pointer transition-all ${
                     selected === item.title
                       ? "border-[#285ab1] bg-[#E9F1FF]"
                       : "border-gray-300 bg-white"
