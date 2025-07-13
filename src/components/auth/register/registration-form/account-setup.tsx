@@ -2,63 +2,82 @@
 
 import { ACCOUNT_TYPE_SCHEMA } from "@/constants.ts/account-type.constant";
 import { Icon, Icons, Input, Inputs } from "@/ui";
+import { useState } from "react";
 
 export default function AccountSetup() {
-  return (
-    <>
-      <div className="grid gap-8">
-        <div className="grid gap-4 place-items-center">
-          <div className="grid place-items-center w-16 h-16 rounded-full p-4 bg-[#555555]">
-            <Icon type={Icons.User} size={32} color="#FFFFFF" />
-          </div>
-          <div className="text-center ">
-            <h2 className="font-bold text-3xl">Account Setup</h2>
-            <p>Choose your account type and set up your transaction PIN</p>
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <Input
-            type={Inputs.Select}
-            label="Phone Number"
-            name="phone-number"
-            options={
-              <div className="grid gap-2 items-center [&>div]:bg-[#E9E9E9] [&>div]:border [&>div]:border-[#285ab1] [&>div]:shadow-sm [&>div]:p-4 [&>div]:h-full [&>div]:rounded-xl [&>div]:flex [&>div]:gap-3 [&_h2]:font-bold [&_h2]:text-lg [&_span]:grid [&_span]:place-items-center [&_span]:bg-[#FFFFFF] [&_span]:rounded-full [&_span]:w-8 [&_span]:h-8 [&_span]:p">
-                {ACCOUNT_TYPE_SCHEMA.map((items, index) => (
-                  <div key={index}>
-                    <span>
-                      <Icon type={items.icon} size={20} color="#285ab1" />
-                    </span>
+  const [selectedType, setSelectedType] = useState<string | null>(null);
 
+  return (
+    <div className="grid gap-8">
+      {/* Header */}
+      <div className="grid gap-4 place-items-center">
+        <div className="grid place-items-center w-16 h-16 rounded-full p-4 bg-[#555555]">
+          <Icon type={Icons.User} size={32} color="#FFFFFF" />
+        </div>
+        <div className="text-center">
+          <h2 className="font-bold text-3xl">Account Setup</h2>
+          <p>Choose your account type and set up your transaction PIN</p>
+        </div>
+      </div>
+
+      {/* Form Fields */}
+      <div className="grid gap-4">
+        <Input
+          type={Inputs.Select}
+          label="Account Type"
+          name="account-type"
+          required
+          placeholder="Select an account type"
+          value={selectedType ?? ""} // 👈 Bind the selected value to the input
+          onChange={(val) => setSelectedType(val)} // 👈 Update state on change
+          customOptions={
+            <div className="grid gap-2 items-center">
+              {ACCOUNT_TYPE_SCHEMA.map((item, index) => (
+                <div
+                  key={index}
+                  className={`cursor-pointer flex items-center justify-between gap-3 p-4 rounded-xl border border-[#285ab1] shadow-sm bg-[#E9E9E9]
+            ${selectedType === item.title ? "bg-[#D6E5FF]" : ""}
+          `}
+                  onClick={() => setSelectedType(item.title)} // 👈 When clicked, update the state
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="grid place-items-center bg-white rounded-full w-10 h-10">
+                      <Icon type={item.icon} size={20} color="#285ab1" />
+                    </span>
                     <div>
-                      <h2>{items.title}</h2>
-                      <p>{items.description}</p>
+                      <h2 className="font-bold text-lg">{item.title}</h2>
+                      <p className="text-sm text-[#555]">{item.description}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            }
-            placeholder="+1(234)-567-8901"
-            required
-          />
-          <Input
-            type={Inputs.Text}
-            label="Phone Number"
-            id="phone-number"
-            name="phone-number"
-            placeholder="+1(234)-567-8901"
-            required
-          />
-          <Input
-            type={Inputs.SelectCountry}
-            label="Country"
-            name="country"
-            required
-            defaultValue="Nigeria"
-            onChange={(val) => console.log("Selected:", val)}
-          />
-        </div>
-        <hr />
+                  {selectedType === item.title && (
+                    <Icon type={Icons.Check} size={20} color="#285ab1" />
+                  )}
+                </div>
+              ))}
+            </div>
+          }
+        />
+
+        <Input
+          type={Inputs.Text}
+          label="Phone Number"
+          id="phone-number"
+          name="phone-number"
+          placeholder="+1(234)-567-8901"
+          required
+        />
+
+        <Input
+          type={Inputs.SelectCountry}
+          label="Country"
+          name="country"
+          required
+          defaultValue="Nigeria"
+          onChange={(val) => console.log("Selected:", val)}
+        />
       </div>
-    </>
+
+      <hr />
+    </div>
   );
 }

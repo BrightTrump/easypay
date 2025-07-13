@@ -13,7 +13,11 @@ export interface SelectInputProps {
   label?: string;
   placeholder?: string;
   name: string;
-  options?: string[] | ReactNode;
+  customOptions?: (
+    setValue: (v: string) => void,
+    selectedValue: string
+  ) => ReactNode;
+  options?: string[];
   required?: boolean;
   readonly?: boolean;
   value?: string;
@@ -27,23 +31,25 @@ export function SelectInput({
   label,
   placeholder,
   name,
+  customOptions,
   options,
   required,
   readonly,
   value,
   defaultValue,
+  className,
   onInput,
   onChange,
 }: SelectInputProps) {
-  const [selectedOption, setSelectedOption] = useState<string | undefined>(
+  const [selectedOption, setSelectedOption] = useState<string>(
     value || defaultValue || ""
   );
 
-  const handleOnValueChange = (e: string) => {
+  const handleOnValueChange = (val: string) => {
     if (!value) {
-      setSelectedOption(e);
+      setSelectedOption(val);
     }
-    onChange?.(e);
+    onChange?.(val);
     onInput?.();
   };
 
@@ -53,10 +59,10 @@ export function SelectInput({
     } else if (defaultValue !== undefined) {
       setSelectedOption(defaultValue);
     }
-  }, [defaultValue, value]);
+  }, [value, defaultValue]);
 
   return (
-    <div className="grid gap-2 content-start">
+    <div className={`grid gap-2 content-start ${className || ""}`}>
       {label && (
         <label className="label">
           {label} {required && "*"}
@@ -80,14 +86,17 @@ export function SelectInput({
 
         <SelectContent>
           <SelectGroup>
-            {options?.map((option, index) => (
-              <SelectItem key={index} value={option}>
-                {option}
-              </SelectItem>
-            ))}
+            {customOptions
+              ? customOptions(handleOnValueChange, selectedOption)
+              : options?.map((option, index) => (
+                  <SelectItem key={index} value={option}>
+                    {option}
+                  </SelectItem>
+                ))}
           </SelectGroup>
         </SelectContent>
       </Select>
     </div>
   );
 }
+y;
