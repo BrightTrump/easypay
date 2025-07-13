@@ -2,6 +2,16 @@ import { Icons } from "@/ui";
 
 export const ACCOUNT_TYPE_SCHEMA = [
   {
+    title: "Savings Account",
+    description: "Earn Interest on your deposit",
+    icon: Icons.Savings,
+  },
+  {
+    title: "Checkings Account",
+    description: "Perfect for daily transactions and bill payment",
+    icon: Icons.AI,
+  },
+  {
     title: "Fixed Deposit",
     description: "Highest intrest rates for fixed terms",
     icon: Icons.Billing,

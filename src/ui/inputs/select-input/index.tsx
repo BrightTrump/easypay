@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -13,7 +13,7 @@ export interface SelectInputProps {
   label?: string;
   placeholder?: string;
   name: string;
-  options?: string[];
+  options?: string[] | ReactNode;
   required?: boolean;
   readonly?: boolean;
   value?: string;
