@@ -14,7 +14,7 @@ export interface SelectInputProps {
   placeholder?: string;
   name: string;
   customOptions?: (
-    setValue: (v: string) => void,
+    setValue: (val: string) => void,
     selectedValue: string
   ) => ReactNode;
   options?: string[];
@@ -74,7 +74,7 @@ export function SelectInput({
         value={selectedOption}
         onValueChange={handleOnValueChange}
       >
-        <SelectTrigger disabled={readonly}>
+        <SelectTrigger>
           <input
             type="text"
             className="w-full bg-transparent outline-none cursor-pointer text-[#555555] placeholder:text-[#8C8C8C]"

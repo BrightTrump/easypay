@@ -34,7 +34,7 @@ export const ACCOUNT_TYPE_SCHEMA = [
   {
     title: "Non-Resident Account",
     description: "For international customers",
-    icon: Icons.Location,
+    icon: Icons.OfficeBuilding,
   },
   {
     title: "Coporate Account",

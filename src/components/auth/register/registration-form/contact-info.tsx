@@ -13,7 +13,8 @@ export default function ContactInfo() {
           <div className="text-center ">
             <h2 className="font-bold text-3xl">Contact Information</h2>
             <p>
-              We'll use these details to communicate with you about your account
+              We&apos;ll use these details to communicate with you about your
+              account
             </p>
           </div>
         </div>
