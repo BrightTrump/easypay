@@ -34,7 +34,6 @@ export function SelectInput({
   customOptions,
   options,
   required,
-  readonly,
   value,
   defaultValue,
   className,
