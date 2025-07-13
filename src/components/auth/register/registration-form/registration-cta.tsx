@@ -27,7 +27,7 @@ export default function RegistrationCta({ step, setStep }: Props) {
       </Button>
       <Button
         type={step === 4 ? "submit" : "button"}
-        onClick={handleNext}
+        onClick={step === 4 ? undefined : handleNext}
         variant={ButtonVariants.BlackFilled}
         className="w-full rounded-sm"
       >

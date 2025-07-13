@@ -3,7 +3,7 @@
 import React from "react";
 import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
-import { FEATURES_SCHEMA } from "@/constants.ts/data.constants";
+import { FEATURES_SCHEMA } from "@/constants.ts/home-page/data.constants";
 
 export default function FeatureSection() {
   return (

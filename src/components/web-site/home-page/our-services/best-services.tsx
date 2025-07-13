@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
-import { SERVICES_ICONS_SCHEMA } from "@/constants.ts/data.constants";
+import { SERVICES_ICONS_SCHEMA } from "@/constants.ts/home-page/data.constants";
 
 export default function BestServices() {
   return (

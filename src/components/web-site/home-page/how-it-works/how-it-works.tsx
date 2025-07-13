@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { HOW_IT_WORK_ITEMS_SCHEMA } from "@/constants.ts/data.constants";
+import { HOW_IT_WORK_ITEMS_SCHEMA } from "@/constants.ts/home-page/data.constants";
 
 export default function HowItWorks() {
   return (

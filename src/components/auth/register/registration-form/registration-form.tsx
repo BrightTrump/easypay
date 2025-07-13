@@ -26,9 +26,11 @@ export default function RegistrationForm() {
     }
   };
 
-  const handleSubmit = () => {
-    if (step > 4) {
-      // Final submission logic
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent the default browser form submission
+
+    if (step === 4) {
+      // Only submit when on the last step AND user clicks Submit
       alert("Form submitted!");
     }
   };

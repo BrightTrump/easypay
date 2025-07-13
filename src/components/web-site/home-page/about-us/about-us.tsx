@@ -5,7 +5,7 @@ import { useCounter } from "@/hooks/counter.hooks";
 import { Icon } from "@/ui";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/data.constants";
+import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/home-page/data.constants";
 
 export default function AboutUs() {
   const { count, countRef } = useCounter(25, 5000);

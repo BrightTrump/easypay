@@ -156,6 +156,8 @@ import Expand from "./expand";
 import CreditCard from "./credit-card";
 import Savings from "./savings";
 import StarRating from "./star-rating";
+import Bitcoin from "./bitcoin";
+import Trading from "./trading";
 
 interface Props extends IconProps {
   type: Icons;
@@ -223,6 +225,9 @@ export function Icon({ type, color, size }: Props) {
 
     case Icons.Bin:
       return <Bin {...props} />;
+
+    case Icons.Bitcoin:
+      return <Bitcoin {...props} />;
 
     case Icons.Board:
       return <Board {...props} />;
@@ -621,6 +626,9 @@ export function Icon({ type, color, size }: Props) {
 
     case Icons.Timeline:
       return <Timeline {...props} />;
+
+    case Icons.Trading:
+      return <Trading {...props} />;
 
     case Icons.Twitter:
       return <Twitter {...props} />;
