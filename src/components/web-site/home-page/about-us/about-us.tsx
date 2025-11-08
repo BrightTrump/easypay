@@ -17,7 +17,7 @@ export default function AboutUs() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
-        className="inset-0 grid gap-10 md:grid-cols-2 items-center px-6 lg:px-20 z-10"
+        className="container mx-auto inset-0 grid gap-10 md:grid-cols-2 items-center px-6 lg:px-20 z-10"
       >
         {/* Image Section */}
         <div className="relative h-[500px] rounded-xl overflow-hidden">

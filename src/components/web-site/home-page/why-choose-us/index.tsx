@@ -6,7 +6,7 @@ import React from "react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-full py-20 layout-spacing">
+    <section className="container mx-auto relative w-full py-20 layout-spacing">
       {/* Content & Images Grid */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}

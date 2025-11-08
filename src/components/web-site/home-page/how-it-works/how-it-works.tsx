@@ -13,7 +13,7 @@ export default function HowItWorks() {
       viewport={{ once: true, amount: 0.2 }}
       className="relative w-full py-20 layout-spacing bg-gradient-to-br from-[#7d97cb] via-[#e4e8f1] to-[#0e59ae]"
     >
-      <div className="grid gap-10 place-items-center px-6 lg:px-20">
+      <div className="container mx-auto grid gap-10 place-items-center px-6 lg:px-20">
         {/* Header */}
         <div className="grid gap-4 text-center">
           <p className="text-xl text-[#285ab1]">How It Works</p>

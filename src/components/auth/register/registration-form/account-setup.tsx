@@ -83,7 +83,7 @@ export default function AccountSetup() {
         />
       </div>
 
-      <hr className="border-t" />
+      <hr />
     </div>
   );
 }
