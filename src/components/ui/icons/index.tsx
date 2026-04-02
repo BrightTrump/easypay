@@ -18,6 +18,8 @@ import SavingsIcon from "./savings";
 import UserGroupIcon from "./user-group";
 import DangerCircleIcon from "./danger-circle";
 import CreditCardIcon from "./credit-card";
+import StarRatingIcon from "./star-rating";
+import PeopleIcon from "./people";
 
 interface Props extends IconProps {
   type: Icons;
@@ -66,6 +68,9 @@ export function Icon({ type, className }: Props) {
     case Icons.Linkedin:
       return <LinkedinIcon {...props} />;
 
+    case Icons.People:
+      return <PeopleIcon {...props} />;
+
     case Icons.Savings:
       return <SavingsIcon {...props} />;
 
@@ -74,6 +79,9 @@ export function Icon({ type, className }: Props) {
 
     case Icons.Settings:
       return <SettingsIcon {...props} />;
+
+    case Icons.StarRating:
+      return <StarRatingIcon {...props} />;
 
     case Icons.Twitter:
       return <TwitterIcon {...props} />;

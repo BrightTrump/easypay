@@ -2,10 +2,10 @@
 
 import React from "react";
 import { useCounter } from "@/hooks/counter.hooks";
-import { Icon } from "@/ui";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ABOUT_US_CARD_SCHEMA } from "@/constants.ts/home-page/data.constants";
+import { Icon } from "@/components/ui";
 
 export default function AboutUs() {
   const { count, countRef } = useCounter(25, 5000);
@@ -68,7 +68,7 @@ export default function AboutUs() {
                  transition-all duration-500 ease-in-out
                  hover:bg-right"
                 >
-                  <Icon type={items.icon} size={20} color="#285ab1" />
+                  <Icon type={items.icon} className="text-xl text-[#285ab1]" />
                   <div>{items.title}</div>
                 </div>
               ))}

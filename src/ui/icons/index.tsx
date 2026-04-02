@@ -101,7 +101,7 @@ import Underline from "./underline";
 import SidebarCollapse from "./sidebar-collapse";
 import Bag from "../../components/ui/icons/bag";
 import Dashboard from "./dashboard";
-import People from "./people";
+import People from "../../components/ui/icons/people";
 import Projects from "./projects";
 import Support from "./support";
 import DocumentOutline from "./document-outline";
@@ -155,7 +155,7 @@ import Shrink from "./shrink";
 import Expand from "./expand";
 import CreditCard from "../../components/ui/icons/credit-card";
 import Savings from "../../components/ui/icons/savings";
-import StarRating from "./star-rating";
+import StarRating from "../../components/ui/icons/star-rating";
 import Bitcoin from "./bitcoin";
 import Trading from "./trading";
 

@@ -49,7 +49,7 @@ export default function Footer() {
                   >
                     <Icon
                       type={social.icon}
-                      className="text-6xl text-[#ffffff]"
+                      className="text-lg text-[#285ab1]"
                     />
                   </Link>
                 ))}
