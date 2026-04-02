@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export const EmailInput = forwardRef<HTMLInputElement, EmailInputProps>(
   function EmailInput(
     { label, name, value, readonly, required, placeholder, onChange },
-    ref
+    ref,
   ) {
     return (
       <div className="grid gap-2 content-start z-10">
@@ -26,15 +26,15 @@ export const EmailInput = forwardRef<HTMLInputElement, EmailInputProps>(
             ref={ref}
             type="email"
             name={name}
-            className="w-full text-[#ffffff] placeholder:text-white border border-gray-600 focus:outline-none focus:ring-0 focus:border-gray-600"
+            className="w-full bg-transparent text-[#000000] outline-none placeholder:text-[#595D60]"
             value={value}
             placeholder={placeholder}
-            readOnly={readonly}
+            // readOnly={readonly}
             onChange={onChange}
             required={required}
           />
         </div>
       </div>
     );
-  }
+  },
 );

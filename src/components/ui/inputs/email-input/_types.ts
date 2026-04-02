@@ -9,9 +9,3 @@ export type EmailInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   className?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
-
-// export interface EmailInputProps
-//   extends React.InputHTMLAttributes<HTMLInputElement> {
-//   label?: string;
-//   readonly?: boolean;
-// }
