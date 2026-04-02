@@ -14,27 +14,29 @@ export default function RegistrationSteps({ step }: RegistrationStepsProps) {
         <div>
           <Progress value={progressiveValue} className="bg-white rounded-xl" />
         </div>
-        <div className={`grid grid-flow-col justify-between text-white `}>
+        <div
+          className={`grid grid-flow-col justify-between text-white [&_span]:hidden [&_span]:md:block `}
+        >
           <p
             className={`grid grid-flow-col justify-between ${
               step >= 1 ? "text-[#285ab1]" : "text-white"
             }`}
           >
-            Personal Info
+            Personal<span> Info</span>
           </p>
           <p
             className={`grid grid-flow-col justify-between  ${
               step >= 2 ? "text-[#285ab1]" : ""
             }`}
           >
-            Contact Details
+            Contact <span> Details</span>
           </p>
           <p
             className={`grid grid-flow-col justify-between ${
               step >= 3 ? "text-[#285ab1]" : "text-white"
             }`}
           >
-            Account Setup
+            Account <span> Setup</span>
           </p>
           <p
             className={`grid grid-flow-col justify-between ${

@@ -17,7 +17,11 @@ export default function Footer() {
         <div className="grid lg:grid-flow-col lg:justify-between items-start gap-20">
           <div className="grid gap-5 w-full">
             {/* Logo */}
-            <Logo />
+            <Link href={"/"}>
+              {" "}
+              <Logo />
+            </Link>
+
             {/* <Logo variant="white" className="w-36" /> */}
 
             <div className="grid gap-4 max-w-xs">
