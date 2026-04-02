@@ -1,8 +1,7 @@
 import React from "react";
 import SectionImage from "./hero-background";
 import Link from "next/link";
-import { Button } from "@/ui/button";
-import { ButtonVariants } from "@/ui/button/types";
+import { Button } from "@/components/ui";
 
 export default function HeroSection() {
   return (
@@ -27,12 +26,7 @@ export default function HeroSection() {
           </div>
 
           <Link href="/register" target="_blank">
-            <Button
-              variant={ButtonVariants.BlackFilled}
-              className="w-max cursor-pointer mx-auto sm:mx-0"
-            >
-              Bank With Us
-            </Button>
+            <Button variant="primary">Bank With Us</Button>
           </Link>
         </div>
       </div>

@@ -6,6 +6,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.theforage.com",
       },
+      {
+        protocol: "https",
+        hostname: "neu.edu.tr",
+      },
+      {
+        protocol: "https",
+        hostname: "www.shutterstock.com",
+      },
     ],
   },
 };

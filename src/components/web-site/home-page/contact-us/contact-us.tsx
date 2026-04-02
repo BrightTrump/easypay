@@ -2,9 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/ui/button";
-import { ButtonVariants } from "@/ui/button/types";
 import Link from "next/link";
+import { Button } from "@/components/ui";
 
 export default function ContactUs() {
   return (
@@ -21,12 +20,7 @@ export default function ContactUs() {
           <p className="text-[#4d4a4a]">Don&apos;t hesitate to contact us.</p>
         </div>
         <Link href={"/contact-us"}>
-          <Button
-            variant={ButtonVariants.BlackFilled}
-            className="whitespace-nowrap border border-[#141414] rounded-xl"
-          >
-            Contact Us
-          </Button>
+          <Button variant="primary">Contact Us</Button>
         </Link>
       </motion.div>
     </section>

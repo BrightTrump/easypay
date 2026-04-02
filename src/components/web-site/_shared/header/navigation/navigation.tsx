@@ -18,20 +18,17 @@ export default function Navigation() {
       </div>
 
       {/* Call to Actions */}
-      <div className=" md:grid md:grid-cols-2 md:gap-3 [&_Button]:cursor-pointer sm:relative md:right-24 lg:right-0">
+      <div className=" md:grid md:grid-flow-col md:gap-3 [&_Button]:cursor-pointer sm:relative md:right-24 lg:right-0">
         <Link href={"/login"} className="grid">
           <Button
-            variant=""
-            className="sm:hidden lg:block whitespace-nowrap border border-[#141414] rounded-xl"
+            variant="blackOutlined"
+            className="sm:hidden lg:block whitespace-nowrap"
           >
             Sign in
           </Button>
         </Link>
         <Link href={"#"} className="grid">
-          <Button
-            variant="blackOutlined"
-            className="whitespace-nowrap border border-[#141414] rounded-xl"
-          >
+          <Button variant="primary" className="whitespace-nowrap">
             Book a Demo
           </Button>
         </Link>

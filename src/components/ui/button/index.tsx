@@ -10,8 +10,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-black border border-black text-white rounded-full",
-        blackOutilined:
+        primary: "bg-black border border-black text-white rounded-xl",
+        blackOutlined:
           "rounded-xl bg-white border border-black text-black items-center justify-center font-medium text-sm px-5 py-2",
         gray: "bg-black text-white rounded-full bg-[#FFFFFF1A]",
         secondary: "bg-[#F6F6F6] border border-[#F6F6F6] text-[#252525]",
