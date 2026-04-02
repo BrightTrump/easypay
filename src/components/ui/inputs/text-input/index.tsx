@@ -28,7 +28,7 @@ export function TextInput({
         <input
           type="text"
           name={name}
-          className="w-full text-sm bg-transparent outline-none text-[#ffffff] placeholder:text-[##595D60]"
+          className="w-full text-sm bg-transparent outline-none text-[#000000] placeholder:text-[##595D60]"
           value={value}
           placeholder={placeholder}
           readOnly={readonly}

@@ -3,7 +3,7 @@
 import React from "react";
 import NavigationItem from "./navigation-item";
 import Link from "next/link";
-import { Button, ButtonVariants } from "@/ui";
+import { Button } from "@/components/ui";
 
 export default function Navigation() {
   return (
@@ -21,7 +21,7 @@ export default function Navigation() {
       <div className=" md:grid md:grid-cols-2 md:gap-3 [&_Button]:cursor-pointer sm:relative md:right-24 lg:right-0">
         <Link href={"/login"} className="grid">
           <Button
-            variant={ButtonVariants.BlackOutlined}
+            variant=""
             className="sm:hidden lg:block whitespace-nowrap border border-[#141414] rounded-xl"
           >
             Sign in
@@ -29,7 +29,7 @@ export default function Navigation() {
         </Link>
         <Link href={"#"} className="grid">
           <Button
-            variant={ButtonVariants.BlackFilled}
+            variant="blackOutlined"
             className="whitespace-nowrap border border-[#141414] rounded-xl"
           >
             Book a Demo

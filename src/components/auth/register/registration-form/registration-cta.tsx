@@ -21,7 +21,7 @@ export default function RegistrationCta({ step, setStep }: Props) {
       <Button
         type="button"
         onClick={handlePrev}
-        variant="gray"
+        variant="primary"
         className="w-full rounded-sm"
       >
         Prev
