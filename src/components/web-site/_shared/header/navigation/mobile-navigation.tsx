@@ -1,10 +1,10 @@
 "use client";
-import { Button, ButtonVariants, Icon, Icons } from "@/ui";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import NavigationItem from "./navigation-item";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import Logo from "../../logo/Logo";
+import { Button, Icon, Icons } from "@/components/ui";
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function MobileNavigation() {
   return (
     <>
       <button className="lg:hidden cursor-pointer" onClick={handleToggle}>
-        <Icon type={Icons.Hamburger} size={32} color="#141414" />
+        <Icon type={Icons.Hamburger} className="text-3xl text-[#141414]" />
       </button>
 
       {isOpen && (
@@ -54,7 +54,10 @@ export default function MobileNavigation() {
                   <Logo />
 
                   <button onClick={handleToggle} className="cursor-pointer">
-                    <Icon type={Icons.Close} size={32} color="#141414" />
+                    <Icon
+                      type={Icons.Close}
+                      className="text-3xl text-[#141414]"
+                    />
                   </button>
                 </div>
               </div>
@@ -76,7 +79,7 @@ export default function MobileNavigation() {
                 <div className="grid grid-cols-2 gap-3 [&_Button]:cursor-pointer px-5 sm:px-8">
                   <Link href={"/login"} className="grid">
                     <Button
-                      variant={ButtonVariants.BlackOutlined}
+                      variant="blackOutlined"
                       className="whitespace-nowrap border border-[#141414] rounded-xl"
                     >
                       Sign in
@@ -84,7 +87,7 @@ export default function MobileNavigation() {
                   </Link>
                   <Link href={"#"} className="grid">
                     <Button
-                      variant={ButtonVariants.BlackFilled}
+                      variant="primary"
                       className="whitespace-nowrap border border-[#141414] rounded-xl"
                     >
                       Book a Demo

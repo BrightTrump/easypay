@@ -26,7 +26,7 @@ import ExpandFill from "./expand-fill";
 import EyeClose from "./eye-close";
 import EyeOpen from "./eye-open";
 import Facebook from "../../components/ui/icons/facebook";
-import Hamburger from "./hamburger";
+import Hamburger from "../../components/ui/icons/hamburger";
 import Home from "./home";
 import Img from "./img";
 import Instagram from "../../components/ui/icons/instagram";

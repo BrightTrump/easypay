@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, ButtonVariants, Icon, Icons, Input, Inputs } from "@/ui";
+import { Button, Icon, Icons, Input, Inputs } from "@/components/ui";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -71,7 +71,7 @@ export default function LoginForm() {
                 : "bg-white border-gray-500"
             }`}
           >
-            <Icon type={Icons.Check} size={16} color="#FFFFFF" />
+            <Icon type={Icons.Check} className="text-3xl text-[#ffffff]" />
           </span>
           Remember Me
         </button>
@@ -84,7 +84,7 @@ export default function LoginForm() {
         type="submit"
         // disabled={!isFormComplete || isLogining || isLoggedIn}
         // isLoading={isLogining}
-        variant={ButtonVariants.PrimaryFilled}
+        variant="primary"
         className="w-ful mt-5"
       >
         Login

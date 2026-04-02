@@ -7,6 +7,7 @@ export const Icons = {
   Close: "close",
   Facebook: "facebook",
   GooglePlay: "google-play",
+  Hamburger: "hamburger",
   Home: "home",
   Instagram: "instagram",
   Linkedin: "linkedin",

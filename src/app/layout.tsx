@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import "@/ui/inputs/index.css";
 import NextTopLoader from "nextjs-toploader";
 // import { ToastContextProvider } from "@/ui/toast/toast-context-provider";
 import { Toaster } from "@/components/ui/sonner";

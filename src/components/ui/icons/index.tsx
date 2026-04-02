@@ -10,6 +10,7 @@ import FacebookIcon from "./facebook";
 import InstagramIcon from "./instagram";
 import LinkedinIcon from "./linkedin";
 import TwitterIcon from "./twitter";
+import HamburgerIcon from "./hamburger";
 
 interface Props extends IconProps {
   type: Icons;
@@ -30,6 +31,9 @@ export function Icon({ type, className }: Props) {
 
     case Icons.GooglePlay:
       return <GooglePlayIcon {...props} />;
+
+    case Icons.Hamburger:
+      return <HamburgerIcon {...props} />;
 
     case Icons.Home:
       return <HomeIcon {...props} />;
