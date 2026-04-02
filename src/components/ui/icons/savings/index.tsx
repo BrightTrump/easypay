@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "../_types";
 
-export default function Savings({ className }: IconProps) {
+export default function SavingsIcon({ className }: IconProps) {
   return (
     <svg
       width="1em"

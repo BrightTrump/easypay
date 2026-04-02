@@ -12,6 +12,12 @@ import LinkedinIcon from "./linkedin";
 import TwitterIcon from "./twitter";
 import HamburgerIcon from "./hamburger";
 import CheckIcon from "./check";
+import BagIcon from "./bag";
+import BillingIcon from "./billing";
+import SavingsIcon from "./savings";
+import UserGroupIcon from "./user-group";
+import DangerCircleIcon from "./danger-circle";
+import CreditCardIcon from "./credit-card";
 
 interface Props extends IconProps {
   type: Icons;
@@ -24,11 +30,23 @@ export function Icon({ type, className }: Props) {
     case Icons.Apple:
       return <AppleIcon {...props} />;
 
+    case Icons.Bag:
+      return <BagIcon {...props} />;
+
+    case Icons.Billing:
+      return <BillingIcon {...props} />;
+
     case Icons.Check:
       return <CheckIcon {...props} />;
 
     case Icons.Close:
       return <CloseIcon {...props} />;
+
+    case Icons.CreditCard:
+      return <CreditCardIcon {...props} />;
+
+    case Icons.DangerCircle:
+      return <DangerCircleIcon {...props} />;
 
     case Icons.Facebook:
       return <FacebookIcon {...props} />;
@@ -48,6 +66,9 @@ export function Icon({ type, className }: Props) {
     case Icons.Linkedin:
       return <LinkedinIcon {...props} />;
 
+    case Icons.Savings:
+      return <SavingsIcon {...props} />;
+
     case Icons.Search:
       return <SearchIcon {...props} />;
 
@@ -59,6 +80,9 @@ export function Icon({ type, className }: Props) {
 
     case Icons.User:
       return <UserIcon {...props} />;
+
+    case Icons.UserGroup:
+      return <UserGroupIcon {...props} />;
 
     default:
       return null;
