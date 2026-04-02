@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
 import { SERVICES_ICONS_SCHEMA } from "@/constants.ts/home-page/data.constants";
+import { Icon } from "@/components/ui";
 
 export default function BestServices() {
   return (
@@ -47,7 +47,7 @@ export default function BestServices() {
             className="grid place-items-center gap-4 p-8 bg-[#F7F8FA] rounded-xl shadow-md"
           >
             <div className="bg-[#285ab1] rounded-full p-4">
-              <Icon type={card.icon} size={60} color="#FFFFFF" />
+              <Icon type={card.icon} className="text-6xl text-[#ffffff]" />
             </div>
             <div className="grid gap-2 text-center">
               <h2 className="text-2xl font-semibold">{card.title}</h2>

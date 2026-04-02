@@ -1,10 +1,10 @@
 "use client";
 
 import { OUR_SERVICES_SCHEMA } from "@/constants.ts/home-page/data.constants";
-import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
 import React from "react";
 import BestServices from "./best-services";
+import { Icon } from "@/components/ui";
 
 export default function OurServices() {
   return (
@@ -32,7 +32,7 @@ export default function OurServices() {
               viewport={{ once: true }}
               className="grid place-items-center gap-5 p-4 bg-white [&>div]:grid [&>div]:gap-4 [&>div]:text-center "
             >
-              <Icon type={item.icon} size={80} color="#285ab1" />
+              <Icon type={item.icon} className="text-[80px] text-[#285ab1]" />
               <div>
                 <h2 className="text-2xl font-semibold">{item.label}</h2>
                 <p>{item.description}</p>
