@@ -1,7 +1,7 @@
-import { Icon, Icons } from "@/ui";
 import Link from "next/link";
 import React from "react";
 import Logo from "../logo/Logo";
+import { Icon, Icons } from "@/components/ui";
 
 const SOCIALS_SCHEMA = [
   { icon: Icons.Facebook, url: "https://www.facebook.com/easypay/" },
@@ -47,7 +47,10 @@ export default function Footer() {
                     target="_blank"
                     className="w-7 h-7 rounded-full bg-white bg-opacity-15 grid place-content-center"
                   >
-                    <Icon type={social.icon} size={16} color="#FFFFFF" />
+                    <Icon
+                      type={social.icon}
+                      className="text-6xl text-[#ffffff]"
+                    />
                   </Link>
                 ))}
               </div>
