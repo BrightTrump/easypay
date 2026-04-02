@@ -18,7 +18,7 @@ export default function RegistrationSteps({ step }: RegistrationStepsProps) {
           />
         </div>
         <div
-          className={`grid grid-flow-col justify-between text-[#000000]  [&_span]:hidden [&_span]:md:block `}
+          className={`grid grid-flow-col justify-between text-[#000000] [&_p]:text-sm md:[&_p]:text-sm [&_span]:hidden [&_span]:md:block `}
         >
           <p
             className={`grid grid-flow-col justify-between ${

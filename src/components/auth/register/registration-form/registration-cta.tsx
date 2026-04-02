@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, ButtonVariants } from "@/ui";
+import { Button } from "@/components/ui";
+
 interface Props {
   step: number;
   setStep: React.Dispatch<React.SetStateAction<number>>;
@@ -20,7 +21,7 @@ export default function RegistrationCta({ step, setStep }: Props) {
       <Button
         type="button"
         onClick={handlePrev}
-        variant={ButtonVariants.Neutral}
+        variant="gray"
         className="w-full rounded-sm"
       >
         Prev
@@ -28,7 +29,7 @@ export default function RegistrationCta({ step, setStep }: Props) {
       <Button
         type={step === 4 ? "submit" : "button"}
         onClick={step === 4 ? undefined : handleNext}
-        variant={ButtonVariants.BlackFilled}
+        variant="primary"
         className="w-full rounded-sm"
       >
         {step === 4 ? "Submit" : "Next"}
