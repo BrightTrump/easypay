@@ -11,6 +11,7 @@ import InstagramIcon from "./instagram";
 import LinkedinIcon from "./linkedin";
 import TwitterIcon from "./twitter";
 import HamburgerIcon from "./hamburger";
+import CheckIcon from "./check";
 
 interface Props extends IconProps {
   type: Icons;
@@ -22,6 +23,9 @@ export function Icon({ type, className }: Props) {
   switch (type) {
     case Icons.Apple:
       return <AppleIcon {...props} />;
+
+    case Icons.Check:
+      return <CheckIcon {...props} />;
 
     case Icons.Close:
       return <CloseIcon {...props} />;

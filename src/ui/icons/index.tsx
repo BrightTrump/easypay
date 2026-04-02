@@ -8,7 +8,7 @@ import Bin from "./bin";
 import Call from "./call";
 import Calling from "./calling";
 import CallMissed from "./call-missed";
-import Check from "./check";
+import Check from "../../components/ui/icons/check";
 import ChevronDown from "./chevron-down";
 import ChevronLeft from "./chevron-left";
 import ChevronUp from "./chevron-up";
