@@ -1,6 +1,4 @@
-"use client";
-
-import { Icon, Icons, Input, Inputs } from "@/ui";
+import { Icon, Icons, Input, Inputs } from "@/components/ui";
 
 export default function PersonalInfo() {
   return (
@@ -8,7 +6,7 @@ export default function PersonalInfo() {
       {/* Header */}
       <div className="grid gap-4 place-items-center text-center">
         <div className="grid place-items-center w-16 h-16 rounded-full p-4 bg-[#555555]">
-          <Icon type={Icons.User} size={32} color="#FFFFFF" />
+          <Icon type={Icons.User} className="text-3xl text-[#000000]" />
         </div>
         <div className="grid gap-1">
           <h2 className="font-bold text-3xl">Personal Information</h2>

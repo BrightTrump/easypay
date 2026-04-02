@@ -39,7 +39,7 @@ export default function RegistrationForm() {
     <form onSubmit={handleSubmit} className="grid gap-6 max-w-xl mx-auto">
       <RegistrationSteps step={step} />
 
-      <div className="bg-white p-5 rounded-xl shadow-md grid gap-5">
+      <div className="p-5 grid gap-5">
         {renderStepComponent()}
         <RegistrationCta step={step} setStep={setStep} />
       </div>

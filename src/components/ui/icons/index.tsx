@@ -5,6 +5,7 @@ import SettingsIcon from "./settings";
 import { type IconProps, Icons } from "./_types";
 import GooglePlayIcon from "./google-play";
 import HomeIcon from "./home";
+import UserIcon from "./user";
 
 interface Props extends IconProps {
   type: Icons;
@@ -31,6 +32,9 @@ export function Icon({ type, className }: Props) {
 
     case Icons.Settings:
       return <SettingsIcon {...props} />;
+
+    case Icons.User:
+      return <UserIcon {...props} />;
 
     default:
       return null;

@@ -9,6 +9,7 @@ export const Icons = {
   Home: "home",
   Search: "search",
   Settings: "settings",
+  User: "user",
 } as const;
 
 export type Icons = (typeof Icons)[keyof typeof Icons];

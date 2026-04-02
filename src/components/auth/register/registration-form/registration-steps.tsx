@@ -10,16 +10,19 @@ export default function RegistrationSteps({ step }: RegistrationStepsProps) {
 
   return (
     <>
-      <div className="w-full grid gap-2 bg-[#a7a6a6] p-3 rounded-xl ">
+      <div className="w-full grid gap-2 p-3 rounded-xl ">
         <div>
-          <Progress value={progressiveValue} className="bg-white rounded-xl" />
+          <Progress
+            value={progressiveValue}
+            className="bg-white rounded-xl border-2 border-gray-400"
+          />
         </div>
         <div
-          className={`grid grid-flow-col justify-between text-white [&_span]:hidden [&_span]:md:block `}
+          className={`grid grid-flow-col justify-between text-[#000000]  [&_span]:hidden [&_span]:md:block `}
         >
           <p
             className={`grid grid-flow-col justify-between ${
-              step >= 1 ? "text-[#285ab1]" : "text-white"
+              step >= 1 ? "text-[#285ab1]" : "text-[#000000]"
             }`}
           >
             Personal<span> Info</span>
@@ -33,14 +36,14 @@ export default function RegistrationSteps({ step }: RegistrationStepsProps) {
           </p>
           <p
             className={`grid grid-flow-col justify-between ${
-              step >= 3 ? "text-[#285ab1]" : "text-white"
+              step >= 3 ? "text-[#285ab1]" : "text-[#000000]"
             }`}
           >
             Account <span> Setup</span>
           </p>
           <p
             className={`grid grid-flow-col justify-between ${
-              step >= 4 ? "text-[#285ab1]" : "text-white"
+              step >= 4 ? "text-[#285ab1]" : "text-[#000000]"
             }`}
           >
             Security
