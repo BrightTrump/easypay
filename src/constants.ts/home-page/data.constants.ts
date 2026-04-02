@@ -1,4 +1,4 @@
-import { Icons } from "@/ui/icons/types";
+import { Icons } from "@/components/ui";
 
 export const OUR_SERVICES_SCHEMA = [
   {

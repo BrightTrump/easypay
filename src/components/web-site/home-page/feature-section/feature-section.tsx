@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { Icon } from "@/ui/icons";
 import { motion } from "framer-motion";
 import { FEATURES_SCHEMA } from "@/constants.ts/home-page/data.constants";
+import { Icon } from "@/components/ui";
 
 export default function FeatureSection() {
   return (
@@ -34,7 +34,7 @@ export default function FeatureSection() {
             viewport={{ once: true }}
             className="grid place-items-center gap-5 px-4 py-6 relative"
           >
-            <Icon type={feature.icon} size={80} color="#285ab1" />
+            <Icon type={feature.icon} className="text-[80px] text-[#285ab1]" />
             <h2 className="text-2xl font-semibold text-center">
               {feature.label}
             </h2>

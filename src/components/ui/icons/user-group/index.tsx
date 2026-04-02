@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../types";
+import { IconProps } from "../../../../ui/icons/types";
 
 export default function UserGroup({ color, size }: IconProps) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../../../ui/icons/types";
+import { IconProps } from "../_types";
 
 export default function InstagramIcon({ className }: IconProps) {
   return (
