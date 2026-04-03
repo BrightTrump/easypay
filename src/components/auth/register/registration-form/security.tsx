@@ -1,6 +1,6 @@
 "use client";
 
-import { Icon, Icons, Input, Inputs } from "@/ui";
+import { Icon, Icons, Input, Inputs } from "@/components/ui";
 
 export default function Security() {
   return (
@@ -8,7 +8,7 @@ export default function Security() {
       <div className="grid gap-8">
         <div className="grid gap-4 place-items-center">
           <div className="grid place-items-center w-16 h-16 rounded-full p-4 bg-[#555555]">
-            <Icon type={Icons.User} size={32} color="#FFFFFF" />
+            <Icon type={Icons.User} className="text-3xl text-[#285ab1]" />
           </div>
           <div className="text-center ">
             <h2 className="font-bold text-3xl">Security</h2>
